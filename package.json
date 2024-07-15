@@ -12,9 +12,12 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "jotai": "^2.9.0",
     "next": "15.0.0-canary.63",
     "react": "19.0.0-rc.0",
     "react-dom": "19.0.0-rc.0",
+    "react-router-dom": "^6.24.1",
+    "react-use-navigate": "^0.1.1",
     "tailwind-merge": "^2.4.0",
     "tailwind-variants": "^0.2.1"
   },
