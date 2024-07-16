@@ -16,7 +16,7 @@ export default function RegisterPage() {
     <main className="h-screen grid grid-cols-2 justify-center items-center bg-sky-400">
       <div className="bg-slate-500 h-screen">
         <Image
-          className="bg-cover"
+          className="bg-cover h-screen"
           src={`/assets/auth-2.jpg`}
           width={1000}
           height={800}
