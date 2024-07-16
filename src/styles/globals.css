@@ -4,6 +4,18 @@
 
 @layer base {
   h1 {
-    @apply text-3xl font-semibold;
+    @apply text-4xl font-bold;
+  }
+  h2 {
+    @apply text-3xl;
+  }
+  h3 {
+    @apply text-lg font-semibold;
+  }
+  h4 {
+    @apply text-sm;
+  }
+  h5 {
+    @apply text-[12px];
   }
 }

@@ -3,7 +3,7 @@ import { twMerge } from "tailwind-merge";
 import { tv, type VariantProps } from "tailwind-variants";
 
 const style = tv({
-  base: "bg-slate-50 disabled:opacity-50 text-slate-800 font-medium tracking-tight rounded-lg px-4 py-2",
+  base: "bg-slate-50 disabled:opacity-50 font-medium tracking-tight rounded-lg px-4 py-2",
   variants: {
     variant: {
       primary: "bg-blue-900 text-orange-300",

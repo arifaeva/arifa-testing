@@ -8,7 +8,7 @@ import { Button } from "@/components/stories/button";
 import { Input } from "@/components/stories/input";
 import { API_URL } from "@/config/apiUrl";
 
-export default function Page() {
+export default function DashboardPage() {
   return (
     <div>
       <Header />
@@ -21,6 +21,54 @@ export default function Page() {
             type="text"
           />
         </form>
+        {/* Section Add Workplace */}
+        <div className="bg-pink-300 p-5 rounded-md space-y-3">
+          <h1 className="text-center">Submit Workplace</h1>
+          <section>
+            <p>Have workplace recommendation?</p>
+            <p>Share with us!</p>
+          </section>
+          <form className="flex flex-col space-y-2">
+            <Input
+              className="w-[320px] self-center"
+              name="name"
+              placeholder="Workplace name"
+              type="text"
+              required
+            />
+            <Input
+              className="w-[320px] self-center"
+              name="description"
+              placeholder="Description"
+              type="text"
+              required
+            />
+            <Input
+              className="w-[320px] self-center"
+              name="address"
+              placeholder="address"
+              type="text"
+              required
+            />
+            <Input
+              className="w-[320px] self-center"
+              name="city"
+              placeholder="city"
+              type="text"
+              required
+            />
+            <Input
+              className="w-[320px] self-center"
+              name="images"
+              placeholder="images"
+              type="file"
+              required
+            />
+            <Button variant="primary" size="sm">
+              Submit
+            </Button>
+          </form>
+        </div>
       </div>
       <div className="flex items-center space-x-3 p-3">
         {/* Section Event */}
