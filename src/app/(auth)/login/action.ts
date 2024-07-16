@@ -4,13 +4,9 @@ import { redirect } from "next/navigation";
 
 import { API_URL } from "@/config/apiUrl";
 
-interface useAuthProps {
-  email?: string;
-  password?: string;
-}
-
-export async function handleLogin(props: useAuthProps) {
-  const { email, password } = props;
+export async function loginAction(_: unknown, formData: FormData) {
+  const email = formData.get("email") as string;
+  const password = formData.get("password") as string;
 
   const res = await fetch(`${API_URL}/auth/login`, {
     method: "POST",
@@ -20,18 +16,18 @@ export async function handleLogin(props: useAuthProps) {
 
   const data = await res.json();
 
-  return data;
-  // redirect("/");
+  if (data.error) {
+    return {
+      message: "Error login",
+    };
+  }
+
+  redirect("/");
 }
 
-export async function handleContinueWithGoogle() {
-  const res = await fetch(`${API_URL}/register/google`);
+export async function continueWithGoogleAction() {
+  const res = await fetch(`${API_URL}/auth/login/google`);
   const data = await res.json();
 
   redirect(data.url);
-  // localStorage.setItem("user", JSON.stringify(data.user));
-  // cookies().set("token", data.token);
-  // redirect("/");
-
-  // return data;
 }

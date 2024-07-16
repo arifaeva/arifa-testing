@@ -1,18 +1,13 @@
 "use server";
 
-// import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
 import { API_URL } from "@/config/apiUrl";
 
-interface IUser {
-  name?: string;
-  email?: string;
-  password?: string;
-}
-
-export async function handleRegister(props: IUser) {
-  const { name, email, password } = props;
+export async function registerAction(_: unknown, formData: FormData) {
+  const name = formData.get("name") as string;
+  const email = formData.get("email") as string;
+  const password = formData.get("password") as string;
 
   const res = await fetch(`${API_URL}/auth/register`, {
     method: "POST",
@@ -22,18 +17,20 @@ export async function handleRegister(props: IUser) {
 
   const data = await res.json();
 
-  return data;
-  // redirect("/login");
+  if (data.error) {
+    return {
+      message: "Error register",
+    };
+  }
+
+  redirect("/login");
 }
 
-export async function handleContinueWithGoogle() {
+export async function continueWithGoogleAction() {
   const res = await fetch(`${API_URL}/auth/register/google`);
   const data = await res.json();
 
   redirect(data.url);
-  // localStorage.setItem("user", JSON.stringify(data.user));
   // cookies().set("token", data.token);
   // redirect("/");
-
-  // return data;
 }
