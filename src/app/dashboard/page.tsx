@@ -73,7 +73,7 @@ export default function DashboardPage() {
       </div>
       <div className="flex space-x-4 p-3">
         {/* Section Event */}
-        <div className="w-[20%] bg-white p-4 space-y-5 rounded-md [box-shadow:5px_5px_orange]">
+        <div className="w-[20%] bg-white p-4 space-y-5 rounded-md [box-shadow:5px_5px_orange] flex flex-col justify-evenly">
           <h1 className="text-center text-blue-900">Events</h1>
           <div>
             <div className="space-y-2 bg-white p-2 rounded-md text-blue-900">
@@ -81,7 +81,7 @@ export default function DashboardPage() {
                 <h3 className="font-bold">Upcoming Events</h3>
                 <h4>Join any upcoming event to work together!</h4>
               </section>
-              <div className="flex flex-col overflow-auto h-72 space-y-2 rounded-md text-blue-900">
+              <div className="flex flex-col overflow-auto h-96 space-y-2 rounded-md text-blue-900">
                 {/* Contoh Event 1 */}
                 <div className="flex flex-col bg-amber-400 rounded-md p-2 space-y-2">
                   <h3 className="text-center">Bekerja bersama Spongebob</h3>
