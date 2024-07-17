@@ -7,21 +7,21 @@ export const Slider = () => {
       <div className="w-full flex justify-center items-center rounded-2xl">
         <Image
           className="bg-cover"
-          src={`/assets/sample-1.png`}
+          src={`/assets/auth-4.jpg`}
           width={400}
           height={400}
           alt="Sample 1"
         />
         <Image
           className="bg-cover"
-          src={`/assets/sample-2.jpg`}
+          src={`/assets/auth-5.jpg`}
           width={400}
           height={400}
           alt="Sample 2"
         />
         <Image
           className="bg-cover"
-          src={`/assets/sample-3.jpg`}
+          src={`/assets/auth-6.jpg`}
           width={400}
           height={400}
           alt="Sample 1"
