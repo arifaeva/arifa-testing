@@ -152,3 +152,5 @@ export default function Page() {
     </div>
   );
 }
+
+// Bikin comment buat ngetes git bash
