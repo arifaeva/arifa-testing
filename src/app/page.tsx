@@ -123,7 +123,8 @@ export default function HomePage() {
             required
             className="self-center w-[400px]"
           />
-          <div className="grid grid-cols-4 gap-2 p-3">
+          <div className="grid grid-cols-4 gap-4 p-3">
+            {/* Sample 1 */}
             <div className="bg-white h-fit rounded-md border-2 border-blue-900 [box-shadow:5px_5px_rgb(23,37,84)]">
               <Image
                 className="bg-cover rounded-sm"
@@ -138,6 +139,72 @@ export default function HomePage() {
                   <h4>Alamat workplace</h4>
                 </section>
                 <Link href={`${API_URL}/1}`}>
+                  <Button variant="primary" size="sm">
+                    See more
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            {/* Sample 2 */}
+            <div className="bg-white h-fit rounded-md border-2 border-blue-900 [box-shadow:5px_5px_rgb(23,37,84)]">
+              <Image
+                className="bg-cover rounded-sm"
+                src={`/assets/auth-5.jpg`}
+                width={500}
+                height={100}
+                alt="Sample workplace 2"
+              />
+              <div className="flex justify-between items-center p-2">
+                <section className="text-blue-900">
+                  <h3>Nama workplace</h3>
+                  <h4>Alamat workplace</h4>
+                </section>
+                <Link href={`${API_URL}/2}`}>
+                  <Button variant="primary" size="sm">
+                    See more
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            {/* Sample 3 */}
+            <div className="bg-white h-fit rounded-md border-2 border-blue-900 [box-shadow:5px_5px_rgb(23,37,84)]">
+              <Image
+                className="bg-cover rounded-sm"
+                src={`/assets/auth-6.jpg`}
+                width={500}
+                height={100}
+                alt="Sample workplace 3"
+              />
+              <div className="flex justify-between items-center p-2">
+                <section className="text-blue-900">
+                  <h3>Nama workplace</h3>
+                  <h4>Alamat workplace</h4>
+                </section>
+                <Link href={`${API_URL}/3}`}>
+                  <Button variant="primary" size="sm">
+                    See more
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            {/* Sample 4 */}
+            <div className="bg-white h-fit rounded-md border-2 border-blue-900 [box-shadow:5px_5px_rgb(23,37,84)]">
+              <Image
+                className="bg-cover rounded-sm"
+                src={`/assets/auth-7.jpg`}
+                width={500}
+                height={100}
+                alt="Sample workplace 4"
+              />
+              <div className="flex justify-between items-center p-2">
+                <section className="text-blue-900">
+                  <h3>Nama workplace</h3>
+                  <h4>Alamat workplace</h4>
+                </section>
+                <Link href={`${API_URL}/4}`}>
                   <Button variant="primary" size="sm">
                     See more
                   </Button>
