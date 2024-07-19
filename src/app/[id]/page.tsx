@@ -4,7 +4,7 @@ import { Slider } from "@/components/shared/slider";
 import { Button } from "@/components/stories/button";
 import { Input } from "@/components/stories/input";
 
-export default function Page() {
+export default function SinglePage() {
   return (
     <div className="bg-blue-900">
       <Header />

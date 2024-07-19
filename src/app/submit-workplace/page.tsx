@@ -1,12 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 
 import { Header } from "@/components/shared/header";
 import { Button } from "@/components/stories/button";
 import { Input } from "@/components/stories/input";
-import { API_URL } from "@/config/apiUrl";
+import { InputFile } from "@/components/stories/input-file";
 
 export default function DashboardPage() {
   return (
@@ -14,60 +13,68 @@ export default function DashboardPage() {
       <Header />
       <div className="flex justify-center items-center">
         {/* Section Add Workplace */}
-        <div className="flex justify-between items-center bg-white p-5 rounded-lg [box-shadow:5px_5px_orange] space-x-2">
+        <div className="w-[1200px] grid grid-cols-2 justify-between items-center bg-white p-5 rounded-lg [box-shadow:5px_5px_orange] space-x-2">
           <Image
             className="h-fit"
             src={`/assets/auth-3.jpg`}
-            width={420}
-            height={10}
+            width={1200}
+            height={100}
             alt="Picture for register page"
           />
-          <div className="bg-blue-900 p-5 rounded-md space-y-3 text-white">
-            <h1 className="text-center">Submit Workplace</h1>
-            <section>
-              <p>Have workplace recommendation?</p>
-              <p>Share with us!</p>
-            </section>
-            <form className="flex flex-col space-y-2">
-              <Input
-                className="w-[320px] self-center"
-                name="name"
-                placeholder="Workplace name"
-                type="text"
-                required
-              />
-              <Input
-                className="w-[320px] self-center"
-                name="description"
-                placeholder="Description"
-                type="text"
-                required
-              />
-              <Input
-                className="w-[320px] self-center"
-                name="address"
-                placeholder="address"
-                type="text"
-                required
-              />
-              <Input
-                className="w-[320px] self-center"
-                name="city"
-                placeholder="city"
-                type="text"
-                required
-              />
-              <Input
+          <div className="flex justify-center items-center">
+            <div className="bg-blue-900 p-5 rounded-md space-y-3 text-white">
+              <h1 className="text-center">Submit Workplace</h1>
+              <section className="text-center">
+                <p>Have any workplace recommendation?</p>
+                <p>Share with us!</p>
+              </section>
+              <form className="flex flex-col space-y-2">
+                <Input
+                  className="w-[320px] self-center"
+                  name="name"
+                  placeholder="Workplace name"
+                  type="text"
+                  required
+                />
+                <Input
+                  className="w-[320px] self-center"
+                  name="description"
+                  placeholder="Description"
+                  type="text"
+                  required
+                />
+                <Input
+                  className="w-[320px] self-center"
+                  name="address"
+                  placeholder="address"
+                  type="text"
+                  required
+                />
+                <Input
+                  className="w-[320px] self-center"
+                  name="city"
+                  placeholder="city"
+                  type="text"
+                  required
+                />
+                <InputFile
+                  className="w-[320px] self-center"
+                  name="images"
+                  placeholder="Choose workplace images"
+                  required
+                />
+                {/* <Input
                 className="w-[320px] self-center"
                 name="images"
                 placeholder="images"
                 type="file"
                 required
-              />
-              <Button variant="tertiary" size="sm">
-                Submit
-              </Button>
-            </form>
+              /> */}
+                <Button variant="tertiary" size="sm">
+                  Submit
+                </Button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
