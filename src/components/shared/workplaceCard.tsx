@@ -24,7 +24,7 @@ export const WorkplaceCard = ({ workplace }: { workplace: IWorkplace }) => {
           <h4 className="line-clamp-1">{workplace.address}</h4>
           <h4>{workplace.city}</h4>
         </section>
-        <Link href={`${API_URL}/${workplace.id}}`}>
+        <Link href={`${API_URL}/${workplace._id}}`}>
           <Button variant="quartenary" size="sm">
             See more
           </Button>

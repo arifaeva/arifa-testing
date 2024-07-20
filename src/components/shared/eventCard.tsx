@@ -16,7 +16,7 @@ export const EventCard = ({ event }: { event: IEvent }) => {
             {event.title}
           </h3>
         </div>
-        <Link href={`${API_URL}/events/${event.id}}`} className="self-center">
+        <Link href={`${API_URL}/events/${event._id}}`} className="self-center">
           <Button variant="tertiary" className="w-full p-0">
             <svg
               xmlns="http://www.w3.org/2000/svg"

@@ -9,7 +9,7 @@ import { Input } from "@/components/stories/input";
 export default function EventPage() {
   const events = [
     {
-      id: "1",
+      _id: "1",
       title: "Bekerja bersama Spoengebob",
       datetime: "21 Juli 2024 10:00 WIB",
       workplace: "Krusty Krab",
@@ -19,7 +19,7 @@ export default function EventPage() {
       user: "Spongebob Squarepants",
     },
     {
-      id: "2",
+      _id: "2",
       title: "WFC with Hokage",
       datetime: "21 November 2038 10:00 WIB",
       workplace: "Ichiraku Ramen",
@@ -29,7 +29,7 @@ export default function EventPage() {
       user: "Spongebob Squarepants",
     },
     {
-      id: "3",
+      _id: "3",
       title: "Kerja bareng Hoshina Fukutaichou",
       datetime: "21 November 2045 15:00 WIB",
       workplace: "Pecel Lele bu Astuti",
@@ -101,7 +101,7 @@ export default function EventPage() {
           </section>
           <div className="grid grid-cols-3 gap-4 p-3">
             {events.map((event) => {
-              return <EventCard key={event.id} event={event} />;
+              return <EventCard key={event._id} event={event} />;
             })}
           </div>
         </div>

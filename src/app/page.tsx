@@ -4,29 +4,30 @@ import { Header } from "@/components/shared/header";
 // import { LandingPage } from "@/components/shared/landingPage";
 import { WorkplaceCard } from "@/components/shared/workplaceCard";
 import { Input } from "@/components/stories/input";
+import { IWorkplace } from "@/types/entity";
 
 export default function HomePage() {
-  const workplaces = [
+  const workplaces: IWorkplace[] = [
     {
-      id: "1",
+      _id: "12345SDF",
       name: "Krusty Krab",
       address: "Seberang Chum Bucket",
       city: "Bikini Bottom",
     },
     {
-      id: "2",
+      _id: "2",
       name: "Ichiraku Ramen",
       address: "Pinggir jalan",
       city: "Konoha",
     },
     {
-      id: "3",
+      _id: "3",
       name: "Pecel Lele Sentosa",
       address: "Lorem ipsum",
       city: "Temanggung",
     },
     {
-      id: "4",
+      _id: "4",
       name: "RM Padang",
       address: "AAAAAAAA",
       city: "Lorem ipsum",
@@ -52,7 +53,7 @@ export default function HomePage() {
         />
         <div className="grid grid-cols-4 gap-4 p-3">
           {workplaces.map((workplace) => {
-            return <WorkplaceCard key={workplace.id} workplace={workplace} />;
+            return <WorkplaceCard key={workplace._id} workplace={workplace} />;
           })}
         </div>
       </div>

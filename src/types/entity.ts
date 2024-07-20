@@ -6,7 +6,7 @@ export interface IUser {
 }
 
 export interface IEvent {
-  id: string;
+  _id: string;
   title: string;
   datetime: string;
   workplace: string;
@@ -16,10 +16,10 @@ export interface IEvent {
 }
 
 export interface IWorkplace {
-  id: string;
-  name: string;
+  _id?: string;
+  name?: string;
   description?: string;
-  address: string;
+  address?: string;
   city?: string;
   images?: string[];
   authorId?: string;
@@ -28,7 +28,7 @@ export interface IWorkplace {
 }
 
 export interface IReview {
-  id: string;
+  _id: string;
   content: string;
   foodPrice: string;
   internet: number;

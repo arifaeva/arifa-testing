@@ -2,7 +2,7 @@ import Avatar from "boring-avatars";
 import Link from "next/link";
 import React from "react";
 
-import { Button } from "../stories/button";
+// import { Button } from "../stories/button";
 
 // export const Header = () => {
 //   return (
