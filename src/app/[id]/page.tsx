@@ -6,13 +6,13 @@ import { Input } from "@/components/stories/input";
 
 export default function SinglePage() {
   return (
-    <div className="bg-blue-900">
+    <div className="bg-[#9ccb9a]">
       <Header />
       <div className="flex flex-col space-y-5 p-6">
         <Slider />
-        <div className="bg-white p-5 rounded-lg space-y-4 [box-shadow:5px_5px_orange]">
-          <div className="flex items-center text-blue-900">
-            <div className="bg-white h-56 w-[80%] p-4">
+        <div className="bg-[#fef4ce] p-5 rounded-lg space-y-4 border-4 border-[#2e2d33]">
+          <div className="flex items-center text-[#2e2d33]">
+            <div className="h-56 w-[80%] p-4">
               <h1 className="text-6xl">Krusty Krab</h1>
               <h2 className="text-lg">Gunung Kidul</h2>
               <h2 className="text-lg">
@@ -35,7 +35,7 @@ export default function SinglePage() {
                 commodi.
               </h4>
             </div>
-            <div className="bg-amber-400 h-56 w-[20%] flex flex-col items-center justify-center space-y-4 rounded-md">
+            <div className="bg-[#e75c45] border-4 border-[#2e2d33] h-56 w-[20%] flex flex-col items-center justify-center space-y-4 rounded-md">
               <div className="flex flex-col items-center justify-center">
                 <h3>Overall rating:</h3>
                 <h1>4.5/5</h1>
@@ -52,36 +52,36 @@ export default function SinglePage() {
               </div>
             </div>
           </div>
-          <div className="flex items-center justify-between text-blue-900">
-            <div className="bg-white border-blue-900 rounded-lg space-y-3 p-4 w-[700px]">
+          <div className="flex items-center justify-between text-[#2e2d33]">
+            <div className="bg-[#fef4ce] rounded-lg space-y-3 p-4 w-[700px]">
               <h1>Reviews</h1>
               <div className="flex justify-items-start items-center space-x-3">
-                <div className="rounded-md bg-orange-400 p-4">A</div>
+                <div className="rounded-md bg-[#e75c45] p-4">A</div>
                 <div>
                   <h3>Name reviewer</h3>
                   <h4>Comment from reviewer</h4>
                 </div>
               </div>
               <div className="flex justify-items-start items-center space-x-3">
-                <div className="rounded-md bg-orange-400 p-4">A</div>
+                <div className="rounded-md bg-[#e75c45] p-4">A</div>
                 <div>
                   <h3>Name reviewer</h3>
                   <h4>Comment from reviewer</h4>
                 </div>
               </div>
               <div className="flex justify-items-start items-center space-x-3">
-                <div className="rounded-md bg-orange-400 p-4">A</div>
+                <div className="rounded-md bg-[#e75c45] p-4">A</div>
                 <div>
                   <h3>Name reviewer</h3>
                   <h4>Comment from reviewer</h4>
                 </div>
               </div>
             </div>
-            <div className="bg-blue-900 rounded-md w-[20%] p-4 space-y-2">
-              <h1 className="text-2xl text-center text-white">
+            <div className="bg-[#9ccb9a] rounded-md w-[20%] p-4 space-y-2 border-4 border-[#2e2d33]">
+              <h1 className="text-2xl text-center text-[#2e2d33]">
                 Share your review!
               </h1>
-              <form className="space-y-2">
+              <form className="space-y-3">
                 <Input
                   name="content"
                   placeholder="Your review on this workplace"

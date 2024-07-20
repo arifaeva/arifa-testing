@@ -11,14 +11,7 @@ const meta: Meta = {
   argTypes: {
     variant: {
       control: { type: "select" },
-      options: [
-        "primary",
-        "secondary",
-        "tertiary",
-        "quartenary",
-        "outline",
-        "ghost",
-      ],
+      options: ["primary", "secondary", "tertiary", "quartenary"],
       description: "Variant for button",
     },
     size: {
@@ -58,19 +51,5 @@ export const ButtonQuartenary: Story = {
   args: {
     children: "Button",
     variant: "quartenary",
-  },
-};
-
-export const ButtonOutline: Story = {
-  args: {
-    children: "Button",
-    variant: "outline",
-  },
-};
-
-export const ButtonGhost: Story = {
-  args: {
-    children: "Button",
-    variant: "ghost",
   },
 };

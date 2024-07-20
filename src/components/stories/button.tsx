@@ -3,15 +3,13 @@ import { twMerge } from "tailwind-merge";
 import { tv, type VariantProps } from "tailwind-variants";
 
 const style = tv({
-  base: "bg-slate-50 disabled:opacity-50 font-medium tracking-tight rounded-lg px-4 py-2",
+  base: "disabled:opacity-50 font-medium tracking-tight rounded-lg px-4 py-2 border-2 border-[#2e2d33] text-[#2e2d33] transition-all duration-100 [box-shadow:5px_5px_#2e2d33] active:translate-x-[3px] active:translate-y-[3px] active:[box-shadow:0px_0px_#2e2d33]",
   variants: {
     variant: {
-      primary: "bg-blue-900 text-orange-300",
-      secondary: "bg-orange-400 text-blue-900",
-      tertiary: "bg-amber-400 text-blue-900",
-      quartenary: "bg-neutral-300 text-blue-900",
-      outline: "bg-transparent border border-slate-0 text-blue-900",
-      ghost: "bg-transparent text-blue-900",
+      primary: "bg-[#2e2d33] text-[#fef4ce] border-[#fef4ce]",
+      secondary: "bg-[#9ccb9a] text-[#2e2d33]",
+      tertiary: "bg-[#e75c45] text-[#2e2d33]",
+      quartenary: "bg-[#fef4ce] text-[#2e2d33]",
     },
     size: {
       sm: "px-2.5 py-1.5 text-sm",

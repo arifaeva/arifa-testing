@@ -4,13 +4,13 @@ import { Header } from "@/components/shared/header";
 
 export default function EventSinglePage() {
   return (
-    <div className="bg-blue-900 h-screen flex flex-col justify-between">
+    <div className="bg-[#9ccb9a] h-screen flex flex-col justify-between">
       <Header />
-      <div className="bg-white w-[800px] m-auto p-8 space-y-12 rounded-lg [box-shadow:5px_5px_orange] text-blue-900">
+      <div className="bg-[#fef4ce] w-[800px] m-auto p-8 space-y-12 rounded-lg [box-shadow:5px_5px_#2e2d33] border-4 border-[#2e2d33] text-[#2e2d33]">
         <div className="flex justify-items-start items-center gap-6">
           <Image
             className="bg-cover"
-            src={`/assets/auth-1.jpg`}
+            src={`/assets/icon-3.png`}
             width={250}
             height={50}
             alt="Picture for login page"
@@ -18,13 +18,13 @@ export default function EventSinglePage() {
           <div className="space-y-3">
             <h2 className="font-bold">Bekerja bersama Spongebob</h2>
             <div className="flex justify-between gap-3">
-              <div className="w-20 font-semibold">
+              <div className="w-24 font-semibold">
                 <h4>Held by</h4>
                 <h4>Date & Time</h4>
                 <h4>Workplace</h4>
                 <h4>Address</h4>
               </div>
-              <div className="flex flex-col w-96">
+              <div className="flex flex-col w-80">
                 <h4>: Spongebob Squarepants</h4>
                 <h4>: 21 Juli 2024 10:00 WIB</h4>
                 <h4>: Krusty Krab</h4>

@@ -5,9 +5,9 @@ import { tv, type VariantProps } from "tailwind-variants";
 
 const style = tv({
   slots: {
-    base: "h-10 flex w-full items-center gap-2 overflow-hidden rounded-md border border-input bg-white px-3 py-2 text-sm ring-offset-background active:outline-blue-900",
+    base: "h-10 flex w-full items-center gap-2 overflow-hidden rounded-md border-2 border-[#2e2d33] bg-[#fef4ce] [box-shadow:5px_5px_#2e2d33] px-3 py-2 text-sm ring-offset-background active:outline-blue-900",
     button:
-      "border-r bg-neutral-300 p-1.5 font-semibold text-slate-600 hover:bg-slate-100 hover:text-slate-700 rounded-md",
+      "border-r p-1.5 font-semibold text-[#fef4ce] bg-[#2e2d33] rounded-md",
   },
 });
 

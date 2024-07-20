@@ -9,26 +9,26 @@ import { InputFile } from "@/components/stories/input-file";
 
 export default function DashboardPage() {
   return (
-    <div className="bg-blue-900 h-screen flex flex-col justify-between">
+    <div className="bg-[#9ccb9a] h-screen flex flex-col justify-between">
       <Header />
       <div className="flex justify-center items-center">
         {/* Section Add Workplace */}
-        <div className="w-[1200px] grid grid-cols-2 justify-between items-center bg-white p-5 rounded-lg [box-shadow:5px_5px_orange] space-x-2">
+        <div className=" grid grid-cols-2 justify-between items-center bg-[#fef4ce] p-5 rounded-lg border-4 border-[#2e2d33] [box-shadow:5px_5px_#2e2d33] space-x-2">
           <Image
-            className="h-fit"
-            src={`/assets/auth-3.jpg`}
-            width={1200}
+            className="h-fit m-auto"
+            src={`/assets/icon-4.png`}
+            width={300}
             height={100}
             alt="Picture for register page"
           />
           <div className="flex justify-center items-center">
-            <div className="bg-blue-900 p-5 rounded-md space-y-3 text-white">
+            <div className="bg-[#9ccb9a] p-5 rounded-md space-y-4 text-[#2e2d33] border-4 border-[#2e2d33]">
               <h1 className="text-center">Submit Workplace</h1>
               <section className="text-center">
                 <p>Have any workplace recommendation?</p>
                 <p>Share with us!</p>
               </section>
-              <form className="flex flex-col space-y-2">
+              <form className="flex flex-col space-y-3">
                 <Input
                   className="w-[320px] self-center"
                   name="name"

@@ -10,18 +10,43 @@ export const Slider = () => {
   const images = [
     {
       id: 1,
-      src: "/assets/auth-3.jpg",
+      src: "/assets/sample-1.jpeg",
       title: "Sample 1",
     },
     {
       id: 2,
-      src: "/assets/auth-4.jpg",
+      src: "/assets/sample-2.jpg",
       title: "Sample 2",
     },
     {
       id: 3,
-      src: "/assets/auth-5.jpg",
+      src: "/assets/sample-3.jpg",
       title: "Sample 3",
+    },
+    {
+      id: 4,
+      src: "/assets/sample-4.jpg",
+      title: "Sample 4",
+    },
+    {
+      id: 5,
+      src: "/assets/sample-5.jpg",
+      title: "Sample 5",
+    },
+    {
+      id: 6,
+      src: "/assets/sample-6.jpg",
+      title: "Sample 6",
+    },
+    {
+      id: 7,
+      src: "/assets/sample-7.jpg",
+      title: "Sample 7",
+    },
+    {
+      id: 8,
+      src: "/assets/sample-8.jpg",
+      title: "Sample 8",
     },
   ];
 
@@ -37,7 +62,7 @@ export const Slider = () => {
   };
 
   return (
-    <main className="place-items-center w-full mx-auto max-w-5xl shadow-2xl rounded-2xl bg-white">
+    <main className="place-items-center w-full mx-auto max-w-5xl shadow-2xl rounded-2xl bg-[#fef4ce] border-4 border-[#2e2d33]">
       <div className={"rounded-2xl p-6"}>
         {images.map((elem, idx) => (
           <div

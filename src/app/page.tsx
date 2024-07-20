@@ -1,6 +1,7 @@
 "use client";
 
 import { Header } from "@/components/shared/header";
+// import { LandingPage } from "@/components/shared/landingPage";
 import { WorkplaceCard } from "@/components/shared/workplaceCard";
 import { Input } from "@/components/stories/input";
 
@@ -33,13 +34,14 @@ export default function HomePage() {
   ];
 
   return (
-    <div className="bg-blue-900 space-y-5 pb-5">
+    <div className="bg-[#9ccb9a] space-y-5 pb-5">
       <Header />
+      {/* <LandingPage /> */}
       {/* Section Workplace Catalog */}
-      <div className="w-[1300px] bg-white flex flex-col items-center m-auto min-h-screen rounded-md space-y-4 p-4 [box-shadow:5px_5px_orange]">
-        <section className="text-blue-900">
+      <div className="w-[1300px] bg-[#fef4ce] border-4 border-[#2e2d33] flex flex-col items-center m-auto min-h-screen rounded-md space-y-4 p-4">
+        <section className="text-[#2e2d33]">
           <h1 className="text-center">Catalog</h1>
-          <p className="text-center">Find where you wanna work!</p>
+          <p className="text-center">Find the best place to work!</p>
         </section>
         <Input
           name="search workplace"

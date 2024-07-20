@@ -13,27 +13,27 @@ export default function LoginPage() {
   const [state, formAction, pending] = useActionState(loginAction, null);
 
   return (
-    <main className="h-screen grid grid-cols-2 justify-center items-center bg-sky-400">
-      <div className="bg-slate-500 h-screen">
+    <main className="h-screen grid grid-cols-2 justify-center items-center">
+      <div className="bg-[#fef4ce] h-screen flex justify-center items-center">
         <Image
-          className="bg-cover h-screen"
-          src={`/assets/auth-1.jpg`}
-          width={1000}
-          height={800}
+          className=""
+          src={`/assets/icon-1.png`}
+          width={400}
+          height={100}
           alt="Picture for login page"
         />
       </div>
 
-      <div className="bg-blue-900 h-screen flex flex-col justify-between items-center">
-        <h2 className="self-end p-3 font-bold text-2xl bg-gradient-to-r from-orange-600 via-neutral-300 to-blue-900 bg-clip-text text-transparent">
+      <div className="bg-[#e75c45] h-screen flex flex-col justify-between items-center">
+        <h2 className="self-end p-3 font-bold text-2xl text-[#fef4ce]">
           TempatNugas
         </h2>
 
-        <div className="w-[400px] bg-white p-5 rounded-lg [box-shadow:5px_5px_darkorange] border-2 border-orange-400 space-y-3">
+        <div className="w-[400px] bg-[#fef4ce] p-5 rounded-lg [box-shadow:5px_5px_#2e2d33] border-2 border-[#2e2d33] space-y-3 text-[#2e2d33]">
           <section>
-            <h2 className="text-blue-900">Hello,</h2>
-            <h1 className="text-blue-900">Welcome back!</h1>
-            <p className="text-blue-900">Good to see you again</p>
+            <h2>Hello,</h2>
+            <h1>Welcome back!</h1>
+            <p>Good to see you again</p>
           </section>
 
           <form action={formAction} className="space-y-3">
@@ -66,7 +66,7 @@ export default function LoginPage() {
             </Button>
           </form>
 
-          <section className="text-blue-900">
+          <section className="">
             Dont have an account?{" "}
             <Link href="/register" className="underline">
               Register

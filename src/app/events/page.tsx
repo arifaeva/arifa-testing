@@ -41,16 +41,16 @@ export default function EventPage() {
   ];
 
   return (
-    <div className="bg-blue-900">
+    <div className="bg-[#9ccb9a]">
       <Header />
-      <div className="flex space-x-8 p-8 w-[1500px] m-auto">
+      <div className="flex space-x-8 p-8 w-[1600px] m-auto">
         {/* Section Event */}
-        <div className="w-[20%] bg-white p-4 space-y-5 rounded-md [box-shadow:5px_5px_orange] flex flex-col justify-start h-fit">
-          <h1 className="text-center text-blue-900">Make Event</h1>
+        <div className="w-[20%] bg-[#fef4ce] p-4 space-y-5 rounded-md border-4 border-[#2e2d33] flex flex-col justify-start h-fit">
+          <h1 className="text-center text-[#2e2d33]">Make Event</h1>
 
           {/* Form Buat Event */}
-          <form className="space-y-2 bg-blue-900 p-3 rounded-md">
-            <h3 className="text-white text-center">
+          <form className="space-y-4 bg-[#9ccb9a] p-5 rounded-md border-4 border-[#2e2d33]">
+            <h3 className="text-[#2e2d33] text-center">
               Arrange and announce your own event!
             </h3>
             <Input
@@ -92,8 +92,8 @@ export default function EventPage() {
         </div>
 
         {/* Section Event Catalog */}
-        <div className="w-[80%] bg-white flex flex-col min-h-screen rounded-md space-y-4 p-4 [box-shadow:5px_5px_orange]">
-          <section className="text-blue-900">
+        <div className="w-[80%] bg-[#fef4ce] flex flex-col min-h-screen rounded-md space-y-4 p-4 border-4 border-[#2e2d33]">
+          <section className="text-[#2e2d33] space-y-4">
             <h1 className="text-center">Upcoming Events</h1>
             <p className="text-center">
               Bored working alone? Join any upcoming event to work together!

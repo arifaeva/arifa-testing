@@ -10,22 +10,22 @@ import { Button } from "../stories/button";
 
 export const WorkplaceCard = ({ workplace }: { workplace: IWorkplace }) => {
   return (
-    <div className="bg-white h-fit rounded-md border-2 border-blue-900 [box-shadow:5px_5px_rgb(23,37,84)]">
+    <div className="bg-[#e75c45] h-fit p-3 rounded-md border-2 border-[#2e2d33] [box-shadow:5px_5px_#2e2d33]">
       <Image
         className="bg-cover rounded-sm"
-        src={`/assets/auth-5.jpg`}
+        src={`/assets/sample-1.jpeg`}
         width={500}
         height={100}
         alt="Sample workplace 1"
       />
       <div className="flex justify-between items-center p-2">
-        <section className="text-blue-900">
-          <h3>{workplace.name}</h3>
-          <h4>{workplace.address}</h4>
+        <section className="text-[#2e2d33]">
+          <h3 className="line-clamp-1">{workplace.name}</h3>
+          <h4 className="line-clamp-1">{workplace.address}</h4>
           <h4>{workplace.city}</h4>
         </section>
         <Link href={`${API_URL}/${workplace.id}}`}>
-          <Button variant="primary" size="sm">
+          <Button variant="quartenary" size="sm">
             See more
           </Button>
         </Link>
