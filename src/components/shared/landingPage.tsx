@@ -7,7 +7,7 @@ import { Button } from "../stories/button";
 
 export const LandingPage = () => {
   return (
-    <div className="h-screen bg-[#2e2d33] border-4 border-[#fef4ce] [box-shadow:5px_5px_#fef4ce] m-auto w-[1600px] rounded-lg flex justify-between items-center space-y-8 text-[#fef4ce]">
+    <div className="h-full bg-[#2e2d33] border-4 border-[#fef4ce] [box-shadow:5px_5px_#fef4ce] m-auto w-[1600px] rounded-lg flex justify-between items-center space-y-8 text-[#fef4ce]">
       <Image
         className="self-start p-6"
         src={`/assets/icon-5.png`}

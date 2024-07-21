@@ -24,13 +24,13 @@ export default function FormReview() {
         />
         <Input
           name="internet"
-          placeholder="Internet Rating"
+          placeholder="Internet Rating (from 0 to 5)"
           type="number"
           required
         />
         <Input
           name="electricity"
-          placeholder="Electricity Rating"
+          placeholder="Electricity Rating (from 0 to 5)"
           type="number"
           required
         />

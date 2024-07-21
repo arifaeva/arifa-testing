@@ -5,6 +5,79 @@ import { IReview, IWorkplace } from "@/types/entity";
 import FormReview from "./components/review.form";
 import { Slider } from "./components/slider";
 
+// Ini versi kalau udah ada API
+
+// export default async function SinglePage({
+//   params,
+// }: {
+//   params: { id: string };
+// }) {
+//   const res_workplace = await fetch(`${API_URL}/workplaces/${params}`);
+//   const workplace = (await res_workplace.json()) as IWorkplace;
+
+//   const res_reviews = await fetch(`${API_URL}/workplaces/${params}/reviews`);
+//   const reviews = (await res_reviews.json()) as IReview[];
+
+//   return (
+//     <div className="bg-[#9ccb9a]">
+//       <Header />
+//       <div className="flex flex-col space-y-5 p-6">
+//         <Slider />
+//         <div className="bg-[#fef4ce] p-5 rounded-lg space-y-4 border-4 border-[#2e2d33]">
+//           <div className="flex items-center text-[#2e2d33]">
+//             <div className="h-56 w-[80%] p-4">
+//               <h1 className="text-6xl">{workplace.name}</h1>
+//               <h2 className="text-lg">{workplace.city}</h2>
+//               <h2 className="text-lg">{workplace.address}</h2>
+//               <div className="flex justify-start space-x-2">
+//                 <h2 className="text-lg font-bold">Price range:</h2>
+//                 <h2 className="font-normal text-lg">{workplace.foodprice}</h2>
+//               </div>
+//               <h4>{workplace.description}</h4>
+//             </div>
+//             <div className="bg-[#e75c45] border-4 border-[#2e2d33] h-56 w-[20%] flex flex-col items-center justify-center space-y-4 rounded-md">
+//               <div className="flex flex-col items-center justify-center">
+//                 <h3>Overall rating:</h3>
+//                 <h1>4.5/5</h1>
+//               </div>
+//               <div className="flex justify-items-start space-x-3">
+//                 <div>
+//                   <h3 className="font-normal">Internet</h3>
+//                   <h3 className="font-normal">Electricity</h3>
+//                 </div>
+//                 <div>
+//                   <h3>: 3/5</h3>
+//                   <h3>: 3.6/5</h3>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//           <div className="flex items-center justify-between text-[#2e2d33]">
+//             <div className="bg-[#fef4ce] rounded-lg space-y-3 p-4 w-[700px]">
+//               <h1>Reviews</h1>
+//               {reviews.map((review) => {
+//                 return (
+//                   <div
+//                     key={review._id}
+//                     className="flex justify-items-start items-center space-x-3"
+//                   >
+//                     <div className="rounded-md bg-[#e75c45] p-4">A</div>
+//                     <div>
+//                       <h3>Name reviewer</h3>
+//                       <h4>{review.content}r</h4>
+//                     </div>
+//                   </div>
+//                 );
+//               })}
+//             </div>
+//             <FormReview />
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
 export default async function SinglePage({
   params,
 }: {
@@ -89,76 +162,3 @@ export default async function SinglePage({
     </div>
   );
 }
-
-// Ini versi kalau udah ada API
-
-// export default async function SinglePage({
-//   params,
-// }: {
-//   params: { id: string };
-// }) {
-//   const res_workplace = await fetch(`${API_URL}/workplaces/${params}`);
-//   const workplace = (await res_workplace.json()) as IWorkplace;
-
-//   const res_reviews = await fetch(`${API_URL}/workplaces/${params}/reviews`);
-//   const reviews = (await res_reviews.json()) as IReview[];
-
-//   return (
-//     <div className="bg-[#9ccb9a]">
-//       <Header />
-//       <div className="flex flex-col space-y-5 p-6">
-//         <Slider />
-//         <div className="bg-[#fef4ce] p-5 rounded-lg space-y-4 border-4 border-[#2e2d33]">
-//           <div className="flex items-center text-[#2e2d33]">
-//             <div className="h-56 w-[80%] p-4">
-//               <h1 className="text-6xl">{workplace.name}</h1>
-//               <h2 className="text-lg">{workplace.city}</h2>
-//               <h2 className="text-lg">{workplace.address}</h2>
-//               <div className="flex justify-start space-x-2">
-//                 <h2 className="text-lg font-bold">Price range:</h2>
-//                 <h2 className="font-normal text-lg">{workplace.foodprice}</h2>
-//               </div>
-//               <h4>{workplace.description}</h4>
-//             </div>
-//             <div className="bg-[#e75c45] border-4 border-[#2e2d33] h-56 w-[20%] flex flex-col items-center justify-center space-y-4 rounded-md">
-//               <div className="flex flex-col items-center justify-center">
-//                 <h3>Overall rating:</h3>
-//                 <h1>4.5/5</h1>
-//               </div>
-//               <div className="flex justify-items-start space-x-3">
-//                 <div>
-//                   <h3 className="font-normal">Internet</h3>
-//                   <h3 className="font-normal">Electricity</h3>
-//                 </div>
-//                 <div>
-//                   <h3>: 3/5</h3>
-//                   <h3>: 3.6/5</h3>
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
-//           <div className="flex items-center justify-between text-[#2e2d33]">
-//             <div className="bg-[#fef4ce] rounded-lg space-y-3 p-4 w-[700px]">
-//               <h1>Reviews</h1>
-//               {reviews.map((review) => {
-//                 return (
-//                   <div
-//                     key={review._id}
-//                     className="flex justify-items-start items-center space-x-3"
-//                   >
-//                     <div className="rounded-md bg-[#e75c45] p-4">A</div>
-//                     <div>
-//                       <h3>Name reviewer</h3>
-//                       <h4>{review.content}r</h4>
-//                     </div>
-//                   </div>
-//                 );
-//               })}
-//             </div>
-//             <FormReview />
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }

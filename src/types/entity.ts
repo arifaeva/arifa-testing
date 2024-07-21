@@ -22,7 +22,7 @@ export interface IWorkplace {
   address?: string;
   city?: string;
   foodprice?: string;
-  file?: string;
+  file?: string | FileList | null;
   authorId?: string;
   isVerified?: boolean;
   isPublished?: boolean;

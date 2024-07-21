@@ -1,5 +1,4 @@
 import { Header } from "@/components/shared/header";
-// import { LandingPage } from "@/components/shared/landingPage";
 import { WorkplaceCard } from "@/components/shared/workplaceCard";
 import { Input } from "@/components/stories/input";
 // import { API_URL } from "@/config/apiUrl";
@@ -39,7 +38,6 @@ export default async function HomePage() {
   return (
     <div className="bg-[#9ccb9a] space-y-5 pb-5">
       <Header />
-      {/* <LandingPage /> */}
       {/* Section Workplace Catalog */}
       <div className="w-[1500px] bg-[#fef4ce] border-4 border-[#2e2d33] flex flex-col items-center m-auto min-h-screen rounded-md space-y-4 p-4">
         <section className="text-[#2e2d33]">

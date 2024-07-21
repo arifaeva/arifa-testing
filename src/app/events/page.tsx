@@ -1,11 +1,13 @@
 import { Header } from "@/components/shared/header";
+import { API_URL } from "@/config/apiUrl";
+import { IEvent } from "@/types/entity";
 
 import { EventCard } from "./components/event.card";
 // import { Textarea } from "@/components/stories/text-area";
 import EventForm from "./components/event.form";
 
 export default function EventPage() {
-  const events = [
+  const events: IEvent[] = [
     {
       _id: "1",
       title: "Bekerja bersama Spoengebob",
@@ -37,6 +39,9 @@ export default function EventPage() {
       user: "Hoshina Soshiro",
     },
   ];
+
+  // const res = await fetch(`${API_URL}/events`);
+  // const events = (await res.json()) as IEvent[];
 
   return (
     <div className="bg-[#9ccb9a]">

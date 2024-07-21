@@ -3,28 +3,35 @@ import Link from "next/link";
 import React from "react";
 
 // import { Button } from "../stories/button";
+// import { LandingPage } from "./landingPage";
+
+// Ini versi kalo gaada data user, nanti header sekalian bakalan muncul sama landing page
 
 // export const Header = () => {
 //   return (
-//     <div className="text-[#2e2d33]">
-//       <header className="flex justify-between items-center p-2 border-b-4 border-[#2e2d33] bg-[#fef4ce]">
-//         <Link href="/">
-//           <h2 className="p-3 font-bold text-2xl">TempatNugas</h2>
-//         </Link>
+//     <div className="flex flex-col justify-between h-screen">
+//       <div className="text-[#2e2d33]">
+//         <header className="flex justify-between items-center p-2 border-b-4 border-[#2e2d33] bg-[#fef4ce]">
+//           <Link href="/">
+//             <h2 className="p-3 font-bold text-2xl">TempatNugas</h2>
+//           </Link>
 
-//         <div className="flex items-center gap-4">
-//           <Link href="/login">
-//             <Button variant="secondary" size="sm">
-//               Sign in
-//             </Button>
-//           </Link>
-//           <Link href="/register">
-//             <Button variant="tertiary" size="sm">
-//               Register
-//             </Button>
-//           </Link>
-//         </div>
-//       </header>
+//           <div className="flex items-center gap-4">
+//             <Link href="/login">
+//               <Button variant="secondary" size="sm">
+//                 Sign in
+//               </Button>
+//             </Link>
+//             <Link href="/register">
+//               <Button variant="tertiary" size="sm">
+//                 Register
+//               </Button>
+//             </Link>
+//           </div>
+//         </header>
+//       </div>
+//       <LandingPage />
+//       <div></div>
 //     </div>
 //   );
 // };
