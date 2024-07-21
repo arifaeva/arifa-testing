@@ -1,11 +1,9 @@
-"use client";
-
 import Link from "next/link";
 
 import { API_URL } from "@/config/apiUrl";
 import { IEvent } from "@/types/entity";
 
-import { Button } from "../stories/button";
+import { Button } from "../../../components/stories/button";
 
 export const EventCard = ({ event }: { event: IEvent }) => {
   return (

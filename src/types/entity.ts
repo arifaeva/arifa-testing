@@ -21,7 +21,8 @@ export interface IWorkplace {
   description?: string;
   address?: string;
   city?: string;
-  images?: string[];
+  foodprice?: string;
+  file?: string;
   authorId?: string;
   isVerified?: boolean;
   isPublished?: boolean;

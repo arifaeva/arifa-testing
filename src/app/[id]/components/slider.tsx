@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-import { Button } from "../stories/button";
+import { Button } from "@/components/stories/button";
 
 export const Slider = () => {
   const [activeImage, setActiveImage] = useState(0);

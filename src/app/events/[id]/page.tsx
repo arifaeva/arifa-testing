@@ -1,8 +1,16 @@
 import Image from "next/image";
 
 import { Header } from "@/components/shared/header";
+// import { IEvent } from "@/types/entity";
 
-export default function EventSinglePage() {
+export default async function EventSinglePage({
+  params,
+}: {
+  params: { id: string };
+}) {
+  // const res = await fetch(`${API_URL}/events/${params}`);
+  // const event = (await res.json()) as IEvent;
+
   return (
     <div className="bg-[#9ccb9a] h-screen flex flex-col justify-between">
       <Header />

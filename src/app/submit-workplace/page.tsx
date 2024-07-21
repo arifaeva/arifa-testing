@@ -1,13 +1,21 @@
 "use client";
 
 import Image from "next/image";
+import React, { useActionState } from "react";
 
 import { Header } from "@/components/shared/header";
 import { Button } from "@/components/stories/button";
 import { Input } from "@/components/stories/input";
 import { InputFile } from "@/components/stories/input-file";
 
+import { submitWorkplaceAction } from "./action";
+
 export default function DashboardPage() {
+  const [state, formAction, pending] = useActionState(
+    submitWorkplaceAction,
+    null
+  );
+
   return (
     <div className="bg-[#9ccb9a] h-screen flex flex-col justify-between">
       <Header />
@@ -19,7 +27,7 @@ export default function DashboardPage() {
             src={`/assets/icon-4.png`}
             width={300}
             height={100}
-            alt="Picture for register page"
+            alt="Picture for submit workplace page"
           />
           <div className="flex justify-center items-center">
             <div className="bg-[#9ccb9a] p-5 rounded-md space-y-4 text-[#2e2d33] border-4 border-[#2e2d33]">
@@ -28,7 +36,7 @@ export default function DashboardPage() {
                 <p>Have any workplace recommendation?</p>
                 <p>Share with us!</p>
               </section>
-              <form className="flex flex-col space-y-3">
+              <form action={formAction} className="flex flex-col space-y-3">
                 <Input
                   className="w-[320px] self-center"
                   name="name"
@@ -64,15 +72,17 @@ export default function DashboardPage() {
                   required
                 />
                 {/* <Input
-                className="w-[320px] self-center"
-                name="images"
-                placeholder="images"
-                type="file"
-                required
-              /> */}
-                <Button variant="tertiary" size="sm">
+                  className="w-[320px] self-center"
+                  name="images"
+                  placeholder="images"
+                  type="file"
+                  required
+                /> */}
+                <input name="authorId" value="authorId" type="hidden" />
+                <Button disabled={pending} variant="tertiary" size="sm">
                   Submit
                 </Button>
+                {state?.message && <p>{state.message}</p>}
               </form>
             </div>
           </div>

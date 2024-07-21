@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 
@@ -19,12 +17,12 @@ export const WorkplaceCard = ({ workplace }: { workplace: IWorkplace }) => {
         alt="Sample workplace 1"
       />
       <div className="flex justify-between items-center p-2">
-        <section className="text-[#2e2d33]">
+        <section className="text-[#2e2d33] w-48">
           <h3 className="line-clamp-1">{workplace.name}</h3>
           <h4 className="line-clamp-1">{workplace.address}</h4>
           <h4>{workplace.city}</h4>
         </section>
-        <Link href={`${API_URL}/${workplace._id}}`}>
+        <Link href={`${API_URL}/${workplace._id}`}>
           <Button variant="quartenary" size="sm">
             See more
           </Button>

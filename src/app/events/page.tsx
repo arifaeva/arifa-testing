@@ -1,10 +1,8 @@
-"use client";
-
-import { EventCard } from "@/components/shared/eventCard";
 import { Header } from "@/components/shared/header";
-import { Button } from "@/components/stories/button";
-import { Input } from "@/components/stories/input";
+
+import { EventCard } from "./components/event.card";
 // import { Textarea } from "@/components/stories/text-area";
+import EventForm from "./components/event.form";
 
 export default function EventPage() {
   const events = [
@@ -44,51 +42,12 @@ export default function EventPage() {
     <div className="bg-[#9ccb9a]">
       <Header />
       <div className="flex space-x-8 p-8 w-[1600px] m-auto">
-        {/* Section Event */}
-        <div className="w-[20%] bg-[#fef4ce] p-4 space-y-5 rounded-md border-4 border-[#2e2d33] flex flex-col justify-start h-fit">
+        {/* Section Make Event */}
+        <div className="w-[20%] bg-[#fef4ce] p-4 space-y-5 rounded-md border-4 border-[#2e2d33] flex flex-col justify-between h-fit">
           <h1 className="text-center text-[#2e2d33]">Make Event</h1>
 
           {/* Form Buat Event */}
-          <form className="space-y-4 bg-[#9ccb9a] p-5 rounded-md border-4 border-[#2e2d33]">
-            <h3 className="text-[#2e2d33] text-center">
-              Arrange and announce your own event!
-            </h3>
-            <Input
-              name="title"
-              placeholder="Event Title"
-              type="text"
-              required
-            />
-            {/* <Textarea name="description" placeholder="Description" required /> */}
-            <Input
-              name="description"
-              placeholder="Event Description"
-              type="text"
-              required
-            />
-            <Input
-              name="date&time"
-              placeholder="Date & Time"
-              type="datetime-local"
-              required
-            />
-            <Input
-              name="event-workplace"
-              placeholder="Workplace name"
-              type="text"
-              required
-            />
-            <Input
-              className="line-clamp-1"
-              name="event-address"
-              placeholder="Workplace address"
-              type="text"
-              required
-            />
-            <Button variant="tertiary" size="sm" className="w-full">
-              Make Event!
-            </Button>
-          </form>
+          <EventForm />
         </div>
 
         {/* Section Event Catalog */}
