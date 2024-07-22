@@ -1,8 +1,9 @@
 import { Header } from "@/components/shared/header";
-import { WorkplaceCard } from "@/components/shared/workplaceCard";
 import { Input } from "@/components/stories/input";
 // import { API_URL } from "@/config/apiUrl";
 import { IWorkplace } from "@/types/entity";
+
+import { WorkplaceCardAdmin } from "./components/admin.workplacecard";
 
 export default async function HomePage() {
   const workplaces: IWorkplace[] = [
@@ -11,24 +12,32 @@ export default async function HomePage() {
       name: "Krusty Krab",
       address: "Seberang Chum Bucket",
       city: "Bikini Bottom",
+      isVerified: true,
+      isPublished: true,
     },
     {
       _id: "2",
       name: "Ichiraku Ramen",
       address: "Pinggir jalan",
       city: "Konoha",
+      isVerified: true,
+      isPublished: true,
     },
     {
       _id: "3",
       name: "Pecel Lele Sentosa",
       address: "Lorem ipsum",
       city: "Temanggung",
+      isVerified: false,
+      isPublished: false,
     },
     {
       _id: "4",
       name: "RM Padang Sentosa Jaya Jaya Jaya Jaya",
       address: "AAAAAAAA",
       city: "Lorem ipsum",
+      isVerified: false,
+      isPublished: false,
     },
   ];
 
@@ -55,7 +64,9 @@ export default async function HomePage() {
         </form>
         <div className="grid grid-cols-4 gap-4 p-3">
           {workplaces.map((workplace) => {
-            return <WorkplaceCard key={workplace._id} workplace={workplace} />;
+            return (
+              <WorkplaceCardAdmin key={workplace._id} workplace={workplace} />
+            );
           })}
         </div>
       </div>

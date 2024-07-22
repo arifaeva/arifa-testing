@@ -1,6 +1,5 @@
 import Link from "next/link";
 
-import { API_URL } from "@/config/apiUrl";
 import { IEvent } from "@/types/entity";
 
 import { Button } from "../../../components/stories/button";
@@ -14,7 +13,7 @@ export const EventCard = ({ event }: { event: IEvent }) => {
             {event.title}
           </h3>
         </div>
-        <Link href={`${API_URL}/events/${event._id}`} className="self-center">
+        <Link href={`/events/${event._id}`} className="self-center">
           <Button variant="tertiary" className="w-full p-0">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -27,7 +26,8 @@ export const EventCard = ({ event }: { event: IEvent }) => {
           </Button>
         </Link>
       </div>
-      <div className="p-2 rounded-lg space-y-2">
+
+      <div className="p-2 rounded-lg space-y-2 flex flex-col justify-between h-full">
         <div className="flex justify-start">
           <div className="font-semibold">
             <h5>Date & Time</h5>
@@ -40,8 +40,8 @@ export const EventCard = ({ event }: { event: IEvent }) => {
             <h5 className="line-clamp-1">: {event.address}</h5>
           </div>
         </div>
-        <h5 className="line-clamp-3">{event.description}</h5>
-        <h5 className="text-end">Event by {event.user}</h5>
+        <h5 className="line-clamp-2">{event.description}</h5>
+        <h5 className="text-end ">Event by {event.user}</h5>
       </div>
     </div>
   );

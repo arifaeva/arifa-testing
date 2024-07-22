@@ -40,7 +40,7 @@ export const Header = () => {
         </Link>
 
         <div className="flex items-center gap-6 font-semibold border-separate">
-          <Link href="/" className="hover:text-[#e75c45]">
+          <Link href="/admin" className="hover:text-[#e75c45]">
             <div>Home</div>
           </Link>
           <Link href="/events" className="hover:text-[#e75c45]">

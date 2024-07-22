@@ -13,7 +13,7 @@ export default function EventForm() {
   return (
     <form
       action={formAction}
-      className=" bg-[#9ccb9a] p-3 flex flex-col gap-2 rounded-md border-4 border-[#2e2d33]"
+      className=" bg-[#9ccb9a] p-4 flex flex-col gap-2 rounded-md border-4 border-[#2e2d33]"
     >
       <h3 className="text-[#2e2d33] text-center tracking-tight">
         Arrange and announce your own event!

@@ -17,7 +17,7 @@ export default function DashboardPage() {
   );
 
   return (
-    <div className="bg-[#9ccb9a] h-screen flex flex-col justify-between">
+    <div className="bg-[#9ccb9a] min-h-screen flex flex-col justify-between">
       <Header />
       <div className="flex justify-center items-center">
         {/* Section Add Workplace */}

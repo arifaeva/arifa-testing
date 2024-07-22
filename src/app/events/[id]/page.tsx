@@ -12,7 +12,7 @@ export default async function EventSinglePage({
   // const event = (await res.json()) as IEvent;
 
   return (
-    <div className="bg-[#9ccb9a] h-full flex flex-col justify-between space-y-3">
+    <div className="bg-[#9ccb9a] min-h-screen flex flex-col justify-between space-y-3">
       <Header />
       <div className="bg-[#fef4ce] w-[800px] m-auto p-8 space-y-12 rounded-lg [box-shadow:5px_5px_#2e2d33] border-4 border-[#2e2d33] text-[#2e2d33]">
         <div className="flex justify-items-start items-center gap-6">

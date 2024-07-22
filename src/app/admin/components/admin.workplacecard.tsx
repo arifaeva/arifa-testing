@@ -1,12 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 
-// import { API_URL } from "@/config/apiUrl";
+import { Button } from "@/components/stories/button";
 import { IWorkplace } from "@/types/entity";
 
-import { Button } from "../stories/button";
-
-export const WorkplaceCard = ({ workplace }: { workplace: IWorkplace }) => {
+export const WorkplaceCardAdmin = ({
+  workplace,
+}: {
+  workplace: IWorkplace;
+}) => {
   return (
     <div className="bg-[#e75c45] h-fit p-3 rounded-md border-2 border-[#2e2d33] [box-shadow:5px_5px_#2e2d33]">
       <Image
@@ -21,8 +23,20 @@ export const WorkplaceCard = ({ workplace }: { workplace: IWorkplace }) => {
           <h3 className="line-clamp-1">{workplace.name}</h3>
           <h4 className="line-clamp-1">{workplace.address}</h4>
           <h4>{workplace.city}</h4>
+          <div className="flex space-x-3">
+            {workplace.isVerified === true ? (
+              <h4>Verified</h4>
+            ) : (
+              <h4>Not verified</h4>
+            )}
+            {workplace.isPublished === true ? (
+              <h4>Published</h4>
+            ) : (
+              <h4>Not published</h4>
+            )}
+          </div>
         </section>
-        <Link href={`/${workplace._id}`}>
+        <Link href={`/admin/${workplace._id}`}>
           <Button variant="quartenary" size="sm" className="tracking-tighter">
             Detail
           </Button>
