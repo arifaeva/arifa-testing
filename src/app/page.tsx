@@ -26,7 +26,7 @@ export default async function HomePage() {
     },
     {
       _id: "4",
-      name: "RM Padang",
+      name: "RM Padang Sentosa Jaya",
       address: "AAAAAAAA",
       city: "Lorem ipsum",
     },
@@ -39,7 +39,7 @@ export default async function HomePage() {
     <div className="bg-[#9ccb9a] space-y-5 pb-5">
       <Header />
       {/* Section Workplace Catalog */}
-      <div className="w-[1500px] bg-[#fef4ce] border-4 border-[#2e2d33] flex flex-col items-center m-auto min-h-screen rounded-md space-y-4 p-4">
+      <div className="w-[1300px] bg-[#fef4ce] border-4 border-[#2e2d33] flex flex-col items-center m-auto min-h-screen rounded-md space-y-4 p-4">
         <section className="text-[#2e2d33]">
           <h1 className="text-center">Catalog</h1>
           <p className="text-center">Find the best place to work!</p>

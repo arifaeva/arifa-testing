@@ -90,7 +90,7 @@ export default async function SinglePage({
         <Slider />
         <div className="bg-[#fef4ce] p-5 rounded-lg space-y-4 border-4 border-[#2e2d33]">
           <div className="flex items-center text-[#2e2d33]">
-            <div className="h-56 w-[80%] p-4">
+            <div className="h-56 w-[75%] p-4">
               <h1 className="text-6xl">Krusty Krab</h1>
               <h2 className="text-lg">Gunung Kidul</h2>
               <h2 className="text-lg">
@@ -113,7 +113,7 @@ export default async function SinglePage({
                 commodi.
               </h4>
             </div>
-            <div className="bg-[#e75c45] border-4 border-[#2e2d33] h-56 w-[20%] flex flex-col items-center justify-center space-y-4 rounded-md">
+            <div className="bg-[#e75c45] border-4 border-[#2e2d33] h-56 w-[25%] flex flex-col items-center justify-center space-y-4 rounded-md">
               <div className="flex flex-col items-center justify-center">
                 <h3>Overall rating:</h3>
                 <h1>4.5/5</h1>

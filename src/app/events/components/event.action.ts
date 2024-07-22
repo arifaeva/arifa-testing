@@ -8,7 +8,7 @@ export async function submitEventAction(_: unknown, formData: FormData) {
   const dateTime = formData.get("dateTime") as unknown as Date;
   const eventWorkplace = formData.get("eventWorkplace") as string;
   const eventAddress = formData.get("eventAddress") as string;
-  const authorId = formData.get("authorId") as string;
+  const userId = formData.get("userId") as string;
   const workplaceId = formData.get("workplaceId") as string;
 
   console.log(
@@ -17,7 +17,7 @@ export async function submitEventAction(_: unknown, formData: FormData) {
     dateTime,
     eventWorkplace,
     eventAddress,
-    authorId,
+    userId,
     workplaceId
   );
 
@@ -30,7 +30,7 @@ export async function submitEventAction(_: unknown, formData: FormData) {
       dateTime,
       eventWorkplace,
       eventAddress,
-      authorId,
+      userId,
       workplaceId,
     }),
   });

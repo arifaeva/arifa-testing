@@ -46,9 +46,9 @@ export default function EventPage() {
   return (
     <div className="bg-[#9ccb9a]">
       <Header />
-      <div className="flex space-x-8 p-8 w-[1600px] m-auto">
+      <div className="flex space-x-4 p-8 w-[1300px] m-auto">
         {/* Section Make Event */}
-        <div className="w-[20%] bg-[#fef4ce] p-4 space-y-5 rounded-md border-4 border-[#2e2d33] flex flex-col justify-between h-fit">
+        <div className="w-[20%] bg-[#fef4ce] p-3 space-y-5 rounded-md border-4 border-[#2e2d33] flex flex-col justify-between h-fit">
           <h1 className="text-center text-[#2e2d33]">Make Event</h1>
 
           {/* Form Buat Event */}
