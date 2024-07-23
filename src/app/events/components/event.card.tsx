@@ -1,3 +1,4 @@
+// import moment from "moment";
 import Link from "next/link";
 
 import { IEvent } from "@/types/entity";
@@ -35,13 +36,13 @@ export const EventCard = ({ event }: { event: IEvent }) => {
             <h5>Address</h5>
           </div>
           <div>
-            <h5>: {event.datetime}</h5>
+            <h5>: {event.datetime}.moment().format(`LLL`)</h5>
             <h5>: {event.workplace}</h5>
             <h5 className="line-clamp-1">: {event.address}</h5>
           </div>
         </div>
         <h5 className="line-clamp-2">{event.description}</h5>
-        <h5 className="text-end ">Event by {event.user}</h5>
+        <h5 className="text-end ">Event by {event.userId}</h5>
       </div>
     </div>
   );

@@ -11,24 +11,32 @@ export default async function HomePage() {
       name: "Krusty Krab",
       address: "Seberang Chum Bucket",
       city: "Bikini Bottom",
+      isVerified: true,
+      isPublished: true,
     },
     {
       _id: "2",
       name: "Ichiraku Ramen",
       address: "Pinggir jalan",
       city: "Konoha",
+      isVerified: true,
+      isPublished: true,
     },
     {
       _id: "3",
       name: "Pecel Lele Sentosa",
       address: "Lorem ipsum",
       city: "Temanggung",
+      isVerified: false,
+      isPublished: false,
     },
     {
       _id: "4",
       name: "RM Padang Sentosa Jaya Jaya Jaya Jaya",
       address: "AAAAAAAA",
       city: "Lorem ipsum",
+      isVerified: false,
+      isPublished: false,
     },
   ];
 
@@ -54,6 +62,7 @@ export default async function HomePage() {
           />
         </form>
         <div className="grid grid-cols-4 gap-4 p-3">
+          {/* ini caranya gimana ya biar cuma nge mapping workplace yang isPublished === true dan isVerified === true */}
           {workplaces.map((workplace) => {
             return <WorkplaceCard key={workplace._id} workplace={workplace} />;
           })}
