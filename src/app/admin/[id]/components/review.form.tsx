@@ -7,7 +7,7 @@ import { Input } from "@/components/stories/input";
 
 import { submitReviewAction } from "./review.action";
 
-export default function FormReview() {
+export const FormReview = ({ workplaceId }: { workplaceId: string }) => {
   const [state, formAction, pending] = useActionState(submitReviewAction, null);
 
   return (
@@ -35,7 +35,7 @@ export default function FormReview() {
           required
         />
         <input name="userId" value="userId" type="hidden" />
-        <input name="workplaceId" value="workplaceId" type="hidden" />
+        <input name="workplaceId" value={workplaceId} type="hidden" />
         <Button
           disabled={pending}
           variant="tertiary"
@@ -48,4 +48,4 @@ export default function FormReview() {
       </form>
     </div>
   );
-}
+};

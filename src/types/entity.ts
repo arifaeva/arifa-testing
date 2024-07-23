@@ -12,7 +12,8 @@ export interface IEvent {
   workplace: string;
   address: string;
   description: string;
-  user: string;
+  userId?: string;
+  workplaceId?: string;
 }
 
 export interface IWorkplace {

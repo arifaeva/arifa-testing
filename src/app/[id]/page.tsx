@@ -1,8 +1,8 @@
 import { Header } from "@/components/shared/header";
-import { API_URL } from "@/config/apiUrl";
-import { IReview, IWorkplace } from "@/types/entity";
 
-import FormReview from "./components/review.form";
+// import { API_URL } from "@/config/apiUrl";
+// import { IReview, IWorkplace } from "@/types/entity";
+import { FormReview } from "./components/review.form";
 import { Slider } from "./components/slider";
 
 // Ini versi kalau udah ada API
@@ -10,7 +10,7 @@ import { Slider } from "./components/slider";
 // export default async function SinglePage({
 //   params,
 // }: {
-//   params: { id: string };
+//   params: { workplaceId: string };
 // }) {
 //   const res_workplace = await fetch(`${API_URL}/workplaces/${params}`);
 //   const workplace = (await res_workplace.json()) as IWorkplace;
@@ -70,7 +70,7 @@ import { Slider } from "./components/slider";
 //                 );
 //               })}
 //             </div>
-//             <FormReview />
+//             <FormReview workplaceId={params.workplaceId} />
 //           </div>
 //         </div>
 //       </div>
@@ -81,7 +81,7 @@ import { Slider } from "./components/slider";
 export default async function SinglePage({
   params,
 }: {
-  params: { id: string };
+  params: { workplaceId: string };
 }) {
   return (
     <div className="bg-[#9ccb9a]">
@@ -155,7 +155,7 @@ export default async function SinglePage({
                 </div>
               </div>
             </div>
-            <FormReview />
+            <FormReview workplaceId={params.workplaceId} />
           </div>
         </div>
       </div>

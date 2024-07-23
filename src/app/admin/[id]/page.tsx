@@ -1,10 +1,10 @@
-import { Header } from "@/components/shared/header";
+import { HeaderAdmin } from "@/components/shared/header.admin";
 
 import DeleteWorkspace from "./components/delete.button";
 import PublishWorkspace from "./components/publish.button";
 // import { API_URL } from "@/config/apiUrl";
 // import { IReview, IWorkplace } from "@/types/entity";
-import FormReview from "./components/review.form";
+import { FormReview } from "./components/review.form";
 import { Slider } from "./components/slider";
 import VerifyWorkspace from "./components/verify.button";
 
@@ -13,7 +13,7 @@ import VerifyWorkspace from "./components/verify.button";
 // export default async function SinglePage({
 //   params,
 // }: {
-//   params: { id: string };
+//   params: { workplaceId: string };
 // }) {
 //   const res_workplace = await fetch(`${API_URL}/workplaces/${params}`);
 //   const workplace = (await res_workplace.json()) as IWorkplace;
@@ -73,7 +73,7 @@ import VerifyWorkspace from "./components/verify.button";
 //                 );
 //               })}
 //             </div>
-//             <FormReview />
+//             <FormReview workplaceId={params.workplaceId} />
 //           </div>
 //         </div>
 //       </div>
@@ -84,11 +84,11 @@ import VerifyWorkspace from "./components/verify.button";
 export default async function SinglePage({
   params,
 }: {
-  params: { id: string };
+  params: { workplaceId: string };
 }) {
   return (
     <div className="bg-[#9ccb9a]">
-      <Header />
+      <HeaderAdmin />
       <div className="flex flex-col space-y-5 p-6">
         <Slider />
         <div className="bg-[#fef4ce] p-5 rounded-lg space-y-4 border-4 border-[#2e2d33]">
@@ -163,7 +163,7 @@ export default async function SinglePage({
                 </div>
               </div>
             </div>
-            <FormReview />
+            <FormReview workplaceId={params.workplaceId} />
           </div>
         </div>
       </div>

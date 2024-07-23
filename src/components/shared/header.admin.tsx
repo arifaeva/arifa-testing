@@ -31,7 +31,7 @@ import { Button } from "../stories/button";
 //   );
 // };
 
-export const Header = () => {
+export const HeaderAdmin = () => {
   return (
     <div className="text-[#2e2d33]">
       <header className="flex justify-between items-center p-2 border-b-4 border-[#2e2d33] bg-[#fef4ce]">

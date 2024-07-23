@@ -7,7 +7,7 @@ import { Input } from "@/components/stories/input";
 
 import { submitEventAction } from "./event.action";
 
-export default function EventForm() {
+export const EventForm = () => {
   const [state, formAction, pending] = useActionState(submitEventAction, null);
 
   return (
@@ -60,4 +60,4 @@ export default function EventForm() {
       {state?.message && <p>{state.message}</p>}
     </form>
   );
-}
+};
