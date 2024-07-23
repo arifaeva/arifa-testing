@@ -11,15 +11,15 @@ export async function submitEventAction(_: unknown, formData: FormData) {
   const userId = formData.get("userId") as string;
   const workplaceId = formData.get("workplaceId") as string;
 
-  console.log(
-    title,
-    description,
-    dateTime,
-    eventWorkplace,
-    eventAddress,
-    userId,
-    workplaceId
-  );
+  // console.log(
+  //   title,
+  //   description,
+  //   dateTime,
+  //   eventWorkplace,
+  //   eventAddress,
+  //   userId,
+  //   workplaceId
+  // );
 
   const res = await fetch(`${API_URL}/events`, {
     method: "POST",

@@ -62,7 +62,7 @@ export default async function HomePage() {
           />
         </form>
         <div className="grid grid-cols-4 gap-4 p-3">
-          {/* ini caranya gimana ya biar cuma nge mapping workplace yang isPublished === true dan isVerified === true */}
+          {/* ini caranya gimana ya biar cuma nge mapping workplace yang isPublished === true dan isVerified === true? Pake filter? */}
           {workplaces.map((workplace) => {
             return <WorkplaceCard key={workplace._id} workplace={workplace} />;
           })}

@@ -1,12 +1,14 @@
+// import Avatar from "boring-avatars";
+
 import { HeaderAdmin } from "@/components/shared/header.admin";
 
-import DeleteWorkspace from "./components/delete.button";
-import PublishWorkspace from "./components/publish.button";
+import { DeleteWorkplace } from "./components/delete.button";
+import { PublishWorkplace } from "./components/publish.button";
 // import { API_URL } from "@/config/apiUrl";
 // import { IReview, IWorkplace } from "@/types/entity";
 import { FormReview } from "./components/review.form";
 import { Slider } from "./components/slider";
-import VerifyWorkspace from "./components/verify.button";
+import { VerifyWorkplace } from "./components/verify.button";
 
 // Ini versi kalau udah ada API
 
@@ -25,7 +27,7 @@ import VerifyWorkspace from "./components/verify.button";
 //     <div className="bg-[#9ccb9a]">
 //       <Header />
 //       <div className="flex flex-col space-y-5 p-6">
-//         <Slider />
+//         <Slider files={workplace.file}/>
 //         <div className="bg-[#fef4ce] p-5 rounded-lg space-y-4 border-4 border-[#2e2d33]">
 //           <div className="flex items-center text-[#2e2d33]">
 //             <div className="h-56 w-[80%] p-4">
@@ -64,9 +66,20 @@ import VerifyWorkspace from "./components/verify.button";
 //                     key={review._id}
 //                     className="flex justify-items-start items-center space-x-3"
 //                   >
-//                     <div className="rounded-md bg-[#e75c45] p-4">A</div>
+//                     <Avatar
+//                       size={40}
+//                       name={review.userId}
+//                       variant="beam"
+//                       colors={[
+//                         "#2E2D33",
+//                         "#E75C45",
+//                         "#C1BCBC",
+//                         "#FEF4CE",
+//                         "#9CCB9A",
+//                       ]}
+//                     />
 //                     <div>
-//                       <h3>Name reviewer</h3>
+//                       <h3>{review.userId</h3>
 //                       <h4>{review.content}r</h4>
 //                     </div>
 //                   </div>
@@ -93,9 +106,9 @@ export default async function SinglePage({
         <Slider />
         <div className="bg-[#fef4ce] p-5 rounded-lg space-y-4 border-4 border-[#2e2d33]">
           <div className="flex space-x-5">
-            <VerifyWorkspace />
-            <PublishWorkspace />
-            <DeleteWorkspace />
+            <VerifyWorkplace workplaceId={params.workplaceId} />
+            <PublishWorkplace workplaceId={params.workplaceId} />
+            <DeleteWorkplace workplaceId={params.workplaceId} />
           </div>
           <div className="flex items-center text-[#2e2d33]">
             <div className="h-56 w-[75%] p-4">

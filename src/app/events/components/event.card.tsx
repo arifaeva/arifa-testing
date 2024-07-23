@@ -36,7 +36,7 @@ export const EventCard = ({ event }: { event: IEvent }) => {
             <h5>Address</h5>
           </div>
           <div>
-            <h5>: {event.datetime}.moment().format(`LLL`)</h5>
+            <h5>: {event.datetime}</h5>
             <h5>: {event.workplace}</h5>
             <h5 className="line-clamp-1">: {event.address}</h5>
           </div>

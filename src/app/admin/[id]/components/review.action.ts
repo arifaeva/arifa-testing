@@ -47,7 +47,7 @@ export async function submitReviewAction(_: unknown, formData: FormData) {
     };
   }
 
-  console.log(content, internet, electricity, userId, workplaceId);
+  // console.log(content, internet, electricity, userId, workplaceId);
 
   const res = await fetch(`${API_URL}/reviews`, {
     method: "POST",

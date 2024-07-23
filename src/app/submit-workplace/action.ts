@@ -5,6 +5,7 @@ import { API_URL } from "@/config/apiUrl";
 export async function submitWorkplaceAction(_: unknown, formData: FormData) {
   const name = formData.get("name") as string;
   const description = formData.get("description") as string;
+  const foodprice = formData.get("foodprice") as string;
   const address = formData.get("address") as string;
   const city = formData.get("city") as string;
   const file = formData.get("images") as unknown as FileList;
@@ -25,6 +26,7 @@ export async function submitWorkplaceAction(_: unknown, formData: FormData) {
     body: JSON.stringify({
       name,
       description,
+      foodprice,
       address,
       city,
       file,

@@ -25,14 +25,22 @@ export const WorkplaceCardAdmin = ({
           <h4>{workplace.city}</h4>
           <div className="flex space-x-3">
             {workplace.isVerified === true ? (
-              <h4>Verified</h4>
+              <h4 className="bg-[#9ccb9a] p-1.5 rounded-md font-semibold">
+                Verified
+              </h4>
             ) : (
-              <h4>Not verified</h4>
+              <h4 className="bg-[#fef4ce] p-1.5 rounded-md font-semibold">
+                Not verified
+              </h4>
             )}
             {workplace.isPublished === true ? (
-              <h4>Published</h4>
+              <h4 className="bg-[#9ccb9a] p-1.5 rounded-md font-semibold">
+                Published
+              </h4>
             ) : (
-              <h4>Not published</h4>
+              <h4 className="bg-[#fef4ce] p-1.5 rounded-md font-semibold">
+                Not published
+              </h4>
             )}
           </div>
         </section>

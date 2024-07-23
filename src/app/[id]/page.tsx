@@ -1,11 +1,13 @@
-import { Header } from "@/components/shared/header";
-
-import { API_URL } from "@/config/apiUrl";
-import { IReview, IWorkplace } from "@/types/entity";
-import { FormReview } from "./components/review.form";
-import { Slider } from "./components/slider";
-
 // Ini versi kalau udah ada API
+
+// import Avatar from "boring-avatars";
+
+// import { Header } from "@/components/shared/header";
+// import { API_URL } from "@/config/apiUrl";
+// import { IReview, IWorkplace } from "@/types/entity";
+
+// import { FormReview } from "./components/review.form";
+// import { Slider } from "./components/slider";
 
 // export default async function SinglePage({
 //   params,
@@ -20,9 +22,9 @@ import { Slider } from "./components/slider";
 
 //   return (
 //     <div className="bg-[#9ccb9a]">
-//       <Header files={workplace.file}/>
+//       <Header />
 //       <div className="flex flex-col space-y-5 p-6">
-//         <Slider />
+//         <Slider files={workplace.file} />
 //         <div className="bg-[#fef4ce] p-5 rounded-lg space-y-4 border-4 border-[#2e2d33]">
 //           <div className="flex items-center text-[#2e2d33]">
 //             <div className="h-56 w-[80%] p-4">
@@ -61,9 +63,20 @@ import { Slider } from "./components/slider";
 //                     key={review._id}
 //                     className="flex justify-items-start items-center space-x-3"
 //                   >
-//                     <div className="rounded-md bg-[#e75c45] p-4">A</div>
+//                     <Avatar
+//                       size={40}
+//                       name={review.userId}
+//                       variant="beam"
+//                       colors={[
+//                         "#2E2D33",
+//                         "#E75C45",
+//                         "#C1BCBC",
+//                         "#FEF4CE",
+//                         "#9CCB9A",
+//                       ]}
+//                     />
 //                     <div>
-//                       <h3>Name reviewer</h3>
+//                       <h3>{review.userId}</h3>
 //                       <h4>{review.content}r</h4>
 //                     </div>
 //                   </div>
@@ -78,14 +91,16 @@ import { Slider } from "./components/slider";
 //   );
 // }
 
+import { Header } from "@/components/shared/header";
+
+import { FormReview } from "./components/review.form";
+import { Slider } from "./components/slider";
+
 export default async function SinglePage({
   params,
 }: {
   params: { workplaceId: string };
 }) {
-  // const res_workplace = await fetch(`${API_URL}/workplaces/${params}`);
-  // const workplace = (await res_workplace.json()) as IWorkplace;
-
   return (
     <div className="bg-[#9ccb9a]">
       <Header />
@@ -136,6 +151,7 @@ export default async function SinglePage({
           <div className="flex items-center justify-between text-[#2e2d33]">
             <div className="bg-[#fef4ce] rounded-lg space-y-3 p-4 w-[700px]">
               <h1>Reviews</h1>
+
               <div className="flex justify-items-start items-center space-x-3">
                 <div className="rounded-md bg-[#e75c45] p-4">A</div>
                 <div>

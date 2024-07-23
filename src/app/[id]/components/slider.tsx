@@ -95,6 +95,8 @@ export const Slider = () => {
   );
 };
 
+// Ini versi kalau udah ada API
+
 // "use client";
 
 // import Image from "next/image";

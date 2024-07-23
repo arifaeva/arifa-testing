@@ -8,7 +8,7 @@ export interface IUser {
 export interface IEvent {
   _id: string;
   title: string;
-  datetime: string | Date;
+  datetime: string;
   workplace: string;
   address: string;
   description: string;
@@ -32,7 +32,7 @@ export interface IWorkplace {
 export interface IReview {
   _id?: string;
   content?: string;
-  foodPrice?: string;
   internet?: number;
   electricity?: number;
+  userId?: string;
 }

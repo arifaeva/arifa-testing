@@ -3,11 +3,7 @@ import Image from "next/image";
 import { Header } from "@/components/shared/header";
 // import { IEvent } from "@/types/entity";
 
-export default async function EventSinglePage({
-  params,
-}: {
-  params: { id: string };
-}) {
+export default async function EventSinglePage() {
   // const res = await fetch(`${API_URL}/events/${params}`);
   // const event = (await res.json()) as IEvent;
 

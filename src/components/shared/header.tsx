@@ -13,7 +13,6 @@ import { Button } from "../stories/button";
 //         <Link href="/">
 //           <h2 className="p-3 font-bold text-2xl">TempatNugas</h2>
 //         </Link>
-
 //         <div className="flex items-center gap-4">
 //           <Link href="/login">
 //             <Button variant="secondary" size="sm">

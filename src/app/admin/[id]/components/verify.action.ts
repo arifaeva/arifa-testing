@@ -2,7 +2,7 @@
 
 import { API_URL } from "@/config/apiUrl";
 
-export async function verifyAction(formData: FormData) {
+export async function verifyAction(_: unknown, formData: FormData) {
   const workplaceId = formData.get("workplaceId") as string;
 
   const res = await fetch(`${API_URL}/workplaces/:id`, {

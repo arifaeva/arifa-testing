@@ -1,2 +1,2 @@
-# echo "Hey in prepush"
-# pnpm build
+echo "Hey in prepush"
+pnpm build

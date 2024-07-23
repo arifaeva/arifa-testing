@@ -53,15 +53,22 @@ export default function DashboardPage() {
                 />
                 <Input
                   className="w-[320px] self-center"
+                  name="foodprice"
+                  placeholder="Food price range"
+                  type="text"
+                  required
+                />
+                <Input
+                  className="w-[320px] self-center"
                   name="address"
-                  placeholder="address"
+                  placeholder="Address"
                   type="text"
                   required
                 />
                 <Input
                   className="w-[320px] self-center"
                   name="city"
-                  placeholder="city"
+                  placeholder="City"
                   type="text"
                   required
                 />
@@ -71,13 +78,7 @@ export default function DashboardPage() {
                   placeholder="Choose workplace images"
                   required
                 />
-                {/* <Input
-                  className="w-[320px] self-center"
-                  name="images"
-                  placeholder="images"
-                  type="file"
-                  required
-                /> */}
+
                 <input name="authorId" value="authorId" type="hidden" />
                 <Button disabled={pending} variant="tertiary" size="sm">
                   Submit
