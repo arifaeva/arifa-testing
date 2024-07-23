@@ -1,7 +1,7 @@
 import { Header } from "@/components/shared/header";
 
-// import { API_URL } from "@/config/apiUrl";
-// import { IReview, IWorkplace } from "@/types/entity";
+import { API_URL } from "@/config/apiUrl";
+import { IReview, IWorkplace } from "@/types/entity";
 import { FormReview } from "./components/review.form";
 import { Slider } from "./components/slider";
 
@@ -20,7 +20,7 @@ import { Slider } from "./components/slider";
 
 //   return (
 //     <div className="bg-[#9ccb9a]">
-//       <Header />
+//       <Header files={workplace.file}/>
 //       <div className="flex flex-col space-y-5 p-6">
 //         <Slider />
 //         <div className="bg-[#fef4ce] p-5 rounded-lg space-y-4 border-4 border-[#2e2d33]">
@@ -83,6 +83,9 @@ export default async function SinglePage({
 }: {
   params: { workplaceId: string };
 }) {
+  // const res_workplace = await fetch(`${API_URL}/workplaces/${params}`);
+  // const workplace = (await res_workplace.json()) as IWorkplace;
+
   return (
     <div className="bg-[#9ccb9a]">
       <Header />

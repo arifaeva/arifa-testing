@@ -48,7 +48,7 @@ export default async function HomePage() {
     <div className="bg-[#9ccb9a] space-y-5 pb-5">
       <HeaderAdmin />
       {/* Section Workplace Catalog */}
-      <div className="m-56 bg-[#fef4ce] border-4 border-[#2e2d33] flex flex-col items-center min-h-screen rounded-md space-y-4 p-4">
+      <div className="m-24 bg-[#fef4ce] border-4 border-[#2e2d33] flex flex-col items-center min-h-screen rounded-md space-y-4 p-4">
         <section className="text-[#2e2d33]">
           <h1 className="text-center">Catalog</h1>
           <p className="text-center">Find the best place to work!</p>

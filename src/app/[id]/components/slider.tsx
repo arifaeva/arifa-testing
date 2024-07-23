@@ -94,3 +94,56 @@ export const Slider = () => {
     </main>
   );
 };
+
+// "use client";
+
+// import Image from "next/image";
+// import { useState } from "react";
+
+// import { Button } from "@/components/stories/button";
+
+// export const Slider = ({ files }: { files: FileList }) => {
+//   const [activeImage, setActiveImage] = useState(0);
+
+//   const clickNext = () => {
+//     (prevIndex: number) => (prevIndex === files.length - 1 ? 0 : prevIndex + 1);
+//   };
+//   const clickPrev = () => {
+//     setActiveImage((prevIndex) =>
+//       prevIndex === 0 ? files.length - 1 : prevIndex - 1
+//     );
+//   };
+
+//   return (
+//     <main className="place-items-center w-full mx-auto max-w-5xl shadow-2xl rounded-2xl bg-[#fef4ce] border-4 border-[#2e2d33]">
+//       <div className={"rounded-2xl p-6"}>
+//         {Array.from(files).map((file, index) => (
+//           <div
+//             key={index}
+//             className={`${
+//               index === activeImage
+//                 ? "block w-full h-[80vh] object-cover"
+//                 : "hidden"
+//             }`}
+//           >
+//             <Image
+//               src={URL.createObjectURL(file)}
+//               alt=""
+//               width={800}
+//               height={400}
+//               className="w-full h-full object-cover md:rounded-lg"
+//             />
+//           </div>
+//         ))}
+//         <div className="flex justify-between">
+//           <form action={clickPrev}>
+//             <Button>Previous</Button>
+//           </form>
+//           <form action={clickNext}>
+//             <Button>Next</Button>
+//           </form>
+//         </div>
+//       </div>
+//     </main>
+//   );
+// };
