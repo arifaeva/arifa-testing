@@ -16,7 +16,7 @@ export async function registerAction(_: unknown, formData: FormData) {
   const email = formData.get("email") as string;
   const password = formData.get("password") as string;
 
-  const validation = registerSchema.safeParse({ email, password });
+  const validation = registerSchema.safeParse({ name, email, password });
 
   if (!validation.success) {
     return {

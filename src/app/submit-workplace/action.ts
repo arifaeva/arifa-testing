@@ -1,6 +1,9 @@
 "use server";
 
+import { redirect } from "next/navigation";
+
 import { API_URL } from "@/config/apiUrl";
+import { serverAuth } from "@/libs/serverAuth";
 
 export async function submitWorkplaceAction(_: unknown, formData: FormData) {
   const name = formData.get("name") as string;
@@ -8,38 +11,41 @@ export async function submitWorkplaceAction(_: unknown, formData: FormData) {
   const foodprice = formData.get("foodprice") as string;
   const address = formData.get("address") as string;
   const city = formData.get("city") as string;
-  const file = formData.get("images") as unknown as FileList;
-  const authorId = formData.get("authorId") as string;
+  const files = formData.get("images") as unknown as Blob;
 
-  //   console.log(
-  //     name,
-  //     description,
-  //     address,
-  //     city,
-  //     images,
-  //     authorId,
-  //   );
+  const auth = serverAuth();
 
-  const res = await fetch(`${API_URL}/workplace`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      name,
-      description,
-      foodprice,
-      address,
-      city,
-      file,
-      authorId,
-    }),
-  });
+  if (!auth) {
+    redirect("/login");
+  }
 
-  const data = await res.json();
-  // console.log(data);
+  const bodyData = new FormData();
+  bodyData.append("name", name);
+  bodyData.append("description", description);
+  bodyData.append("foodprice", foodprice);
+  bodyData.append("address", address);
+  bodyData.append("city", city);
+  bodyData.append("file", files);
+  bodyData.append("authorId", auth.id);
 
-  if (data.error) {
+  try {
+    const res = await fetch(`${API_URL}/workplaces/add`, {
+      method: "POST",
+      body: bodyData,
+    });
+
+    const data = await res.json();
+    console.log(data);
+  } catch (error) {
+    console.log(error);
     return {
       message: "Error submit workplace",
     };
   }
+
+  // if (data.error) {
+  //   return {
+  //     message: "Error submit workplace",
+  //   };
+  // }
 }

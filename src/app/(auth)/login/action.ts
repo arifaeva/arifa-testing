@@ -1,5 +1,6 @@
 "use server";
 
+import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import z from "zod";
 
@@ -35,11 +36,16 @@ export async function loginAction(_: unknown, formData: FormData) {
 
   const data = await res.json();
 
-  if (data.error) {
+  if (res.status === 403) {
     return {
-      message: "Error login",
+      status: "error",
+      message: data.message,
     };
   }
+
+  cookies().set("token", data.token, {
+    httpOnly: true,
+  });
 
   redirect("/");
 }

@@ -17,22 +17,26 @@ export interface IEvent {
 }
 
 export interface IWorkplace {
-  _id?: string;
-  name?: string;
-  description?: string;
-  address?: string;
-  city?: string;
-  foodprice?: string;
-  file?: string | FileList | null;
-  authorId?: string;
-  isVerified?: boolean;
-  isPublished?: boolean;
+  _id: string;
+  name: string;
+  description: string;
+  address: string;
+  city: string;
+  foodprice: string;
+  file: string;
+  authorId: string;
+  isVerified: boolean;
+  isPublished: boolean;
 }
 
 export interface IReview {
-  _id?: string;
-  content?: string;
-  internet?: number;
-  electricity?: number;
-  userId?: string;
+  _id: string;
+  content: string;
+  internet: number;
+  electricity: number;
+  userId: {
+    _id: string;
+    name: string;
+    avatarUrl: string;
+  };
 }
