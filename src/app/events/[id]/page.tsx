@@ -1,3 +1,4 @@
+import moment from "moment";
 import Image from "next/image";
 
 import { API_URL } from "@/config/apiUrl";
@@ -33,7 +34,7 @@ export default async function EventSinglePage({
               </div>
               <div className="flex flex-col w-80">
                 <h4>: {event.userId.name}</h4>
-                <h4>: {event.dateTime}</h4>
+                <h4>: {moment(event.dateTime).format("LLL")}</h4>
                 <h4>: {event.eventWorkplace}</h4>
                 <h4>: {event.eventAddress}</h4>
               </div>
