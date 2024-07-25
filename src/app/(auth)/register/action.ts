@@ -37,6 +37,7 @@ export async function registerAction(_: unknown, formData: FormData) {
   });
 
   const data = await res.json();
+  console.log(data);
 
   if (data.error) {
     return {

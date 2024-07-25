@@ -35,6 +35,7 @@ export async function loginAction(_: unknown, formData: FormData) {
   });
 
   const data = await res.json();
+  console.log(data);
 
   if (res.status === 403) {
     return {

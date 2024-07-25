@@ -1,6 +1,7 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
 import z from "zod";
 
 import { API_URL } from "@/config/apiUrl";
@@ -8,8 +9,14 @@ import { serverAuth } from "@/libs/serverAuth";
 
 const reviewSchema = z.object({
   content: z.string(),
-  internet: z.number().min(0, { message: "rating must be in range between 0 to 5" }).max(5, { message: "rating must be in range between 0 to 5" }),
-  electricity: z.number().min(0, { message: "rating must be in range between 0 to 5" }).max(5, { message: "rating must be in range between 0 to 5" }),
+  internet: z
+    .number()
+    .min(0, { message: "rating must be in range between 0 to 5" })
+    .max(5, { message: "rating must be in range between 0 to 5" }),
+  electricity: z
+    .number()
+    .min(0, { message: "rating must be in range between 0 to 5" })
+    .max(5, { message: "rating must be in range between 0 to 5" }),
   userId: z.string(),
   workplaceId: z.string(),
 });
@@ -21,6 +28,10 @@ export async function submitReviewAction(_: unknown, formData: FormData) {
   const workplaceId = formData.get("workplaceId") as string;
 
   const auth = serverAuth();
+
+  if (!auth) {
+    redirect("/login");
+  }
 
   const validation = reviewSchema.safeParse({
     content,
