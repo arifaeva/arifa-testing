@@ -26,12 +26,16 @@ export const FormReview = ({ workplaceId }: { workplaceId: string }) => {
           name="internet"
           placeholder="Internet Rating (from 0 to 5)"
           type="number"
+          min="1"
+          max="5"
           required
         />
         <Input
           name="electricity"
           placeholder="Electricity Rating (from 0 to 5)"
           type="number"
+          min="1"
+          max="5"
           required
         />
         <input name="workplaceId" value={workplaceId} type="hidden" />

@@ -8,12 +8,16 @@ export interface IUser {
 export interface IEvent {
   _id: string;
   title: string;
-  datetime: string;
-  workplace: string;
-  address: string;
+  dateTime: string;
+  eventWorkplace: string;
+  eventAddress: string;
   description: string;
-  userId?: string;
-  workplaceId?: string;
+  userId: {
+    _id: string;
+    name: string;
+    avatarUrl: string;
+  };
+  workplaceId: string;
 }
 
 export interface IWorkplace {
@@ -22,7 +26,7 @@ export interface IWorkplace {
   description: string;
   address: string;
   city: string;
-  foodprice: string;
+  foodPrice: string;
   file: string;
   authorId: string;
   isVerified: boolean;

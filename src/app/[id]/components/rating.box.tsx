@@ -25,7 +25,7 @@ export const RatingBox = ({ reviews }: { reviews: IReview[] }) => {
   // Calculate average of all ratings
   function averageAllRating() {
     if (reviews.length === 0) {
-      return "not rated yet";
+      return "Not rated yet";
     }
     const totalSum = reviews.reduce(
       (acc, review) => acc + review.internet + review.electricity,
@@ -38,7 +38,7 @@ export const RatingBox = ({ reviews }: { reviews: IReview[] }) => {
   // Calculate average internet rating
   function averageInternetRating() {
     if (reviews.length === 0) {
-      return "not rated yet";
+      return "Not rated yet";
     }
     const totalSum = reviews.reduce((acc, review) => acc + review.internet, 0);
     const average = totalSum / reviews.length;
@@ -48,7 +48,7 @@ export const RatingBox = ({ reviews }: { reviews: IReview[] }) => {
   // Calculate average electricity rating
   function averageElectricityRating() {
     if (reviews.length === 0) {
-      return "not rated yet";
+      return "Not rated yet";
     }
     const totalSum = reviews.reduce(
       (acc, review) => acc + review.electricity,

@@ -47,7 +47,7 @@ export default function DashboardPage() {
                 />
                 <Input
                   className="w-[320px] self-center"
-                  name="foodprice"
+                  name="foodPrice"
                   placeholder="Food price range"
                   type="text"
                   required

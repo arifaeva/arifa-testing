@@ -46,7 +46,6 @@ export const EventForm = () => {
           type="text"
           required
         />
-        <input name="userId" value="userId" type="hidden" />
         <input name="workplaceId" value="workplaceId" type="hidden" />
         <Button
           disabled={pending}

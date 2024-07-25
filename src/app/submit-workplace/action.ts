@@ -8,7 +8,7 @@ import { serverAuth } from "@/libs/serverAuth";
 export async function submitWorkplaceAction(_: unknown, formData: FormData) {
   const name = formData.get("name") as string;
   const description = formData.get("description") as string;
-  const foodprice = formData.get("foodprice") as string;
+  const foodPrice = formData.get("foodPrice") as string;
   const address = formData.get("address") as string;
   const city = formData.get("city") as string;
   const files = formData.get("images") as unknown as Blob;
@@ -22,7 +22,7 @@ export async function submitWorkplaceAction(_: unknown, formData: FormData) {
   const bodyData = new FormData();
   bodyData.append("name", name);
   bodyData.append("description", description);
-  bodyData.append("foodprice", foodprice);
+  bodyData.append("foodPrice", foodPrice);
   bodyData.append("address", address);
   bodyData.append("city", city);
   bodyData.append("file", files);

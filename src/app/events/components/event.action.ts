@@ -1,27 +1,35 @@
 "use server";
 
+import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
+
 import { API_URL } from "@/config/apiUrl";
+import { serverAuth } from "@/libs/serverAuth";
 
 export async function submitEventAction(_: unknown, formData: FormData) {
   const title = formData.get("title") as string;
   const description = formData.get("description") as string;
-  const dateTime = formData.get("dateTime") as unknown as Date;
+  const dateTime = formData.get("dateTime") as string;
   const eventWorkplace = formData.get("eventWorkplace") as string;
   const eventAddress = formData.get("eventAddress") as string;
-  const userId = formData.get("userId") as string;
   const workplaceId = formData.get("workplaceId") as string;
 
-  // console.log(
-  //   title,
-  //   description,
-  //   dateTime,
-  //   eventWorkplace,
-  //   eventAddress,
-  //   userId,
-  //   workplaceId
-  // );
+  console.log(
+    title,
+    description,
+    dateTime,
+    eventWorkplace,
+    eventAddress,
+    workplaceId
+  );
 
-  const res = await fetch(`${API_URL}/events`, {
+  const auth = serverAuth();
+
+  if (!auth) {
+    redirect("/login");
+  }
+
+  const res = await fetch(`${API_URL}/events/create`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
@@ -30,12 +38,14 @@ export async function submitEventAction(_: unknown, formData: FormData) {
       dateTime,
       eventWorkplace,
       eventAddress,
-      userId,
+      userId: auth?.id,
       workplaceId,
     }),
   });
 
   const data = await res.json();
+
+  revalidatePath("/events", "page");
 
   if (data.error) {
     return {

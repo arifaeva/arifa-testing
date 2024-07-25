@@ -38,7 +38,7 @@ export default async function SinglePage({
               <h2 className="text-lg">{workplace.address}</h2>
               <div className="flex justify-start space-x-2">
                 <h2 className="text-lg font-bold">Price range:</h2>
-                <h2 className="font-normal text-lg">{workplace.foodprice}</h2>
+                <h2 className="font-normal text-lg">{workplace.foodPrice}</h2>
               </div>
               <h4>{workplace.description}</h4>
             </div>
