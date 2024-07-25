@@ -14,15 +14,13 @@ interface IReview {
 }
 
 export const RatingBox = ({ reviews }: { reviews: IReview[] }) => {
-  const [allRating, setAllRating] = useState<number | "not rated yet">(
-    "not rated yet"
+  const [allRating, setAllRating] = useState<number | string>("Not rated yet");
+  const [internetRating, setInternetRating] = useState<number | string>(
+    "Not rated yet"
   );
-  const [internetRating, setInternetRating] = useState<
-    number | "not rated yet"
-  >("not rated yet");
-  const [electricityRating, setElectricityRating] = useState<
-    number | "not rated yet"
-  >("not rated yet");
+  const [electricityRating, setElectricityRating] = useState<number | string>(
+    "Not rated yet"
+  );
 
   // Calculate average of all ratings
   function averageAllRating() {
@@ -65,7 +63,7 @@ export const RatingBox = ({ reviews }: { reviews: IReview[] }) => {
     setAllRating(averageAllRating());
     setInternetRating(averageInternetRating());
     setElectricityRating(averageElectricityRating());
-  }, [reviews]);
+  });
 
   return (
     <div className="bg-[#e75c45] border-4 border-[#2e2d33] h-56 w-[25%] flex flex-col items-center justify-center space-y-4 rounded-md">
