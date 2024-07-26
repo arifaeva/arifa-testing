@@ -10,18 +10,9 @@ export async function submitEventAction(_: unknown, formData: FormData) {
   const title = formData.get("title") as string;
   const description = formData.get("description") as string;
   const dateTime = formData.get("dateTime") as string;
-  const eventWorkplace = formData.get("eventWorkplace") as string;
-  const eventAddress = formData.get("eventAddress") as string;
   const workplaceId = formData.get("workplaceId") as string;
 
-  console.log(
-    title,
-    description,
-    dateTime,
-    eventWorkplace,
-    eventAddress,
-    workplaceId
-  );
+  console.log(title, description, dateTime, workplaceId);
 
   const auth = serverAuth();
 
@@ -36,8 +27,6 @@ export async function submitEventAction(_: unknown, formData: FormData) {
       title,
       description,
       dateTime,
-      eventWorkplace,
-      eventAddress,
       userId: auth?.id,
       workplaceId,
     }),

@@ -38,8 +38,8 @@ export const EventCard = ({ event }: { event: IEvent }) => {
           </div>
           <div>
             <h5>: {moment(event.dateTime).format("LLL")}</h5>
-            <h5>: {event.eventWorkplace}</h5>
-            <h5 className="line-clamp-1">: {event.eventAddress}</h5>
+            <h5>: {event.workplaceId.name}</h5>
+            <h5 className="line-clamp-1">: {event.workplaceId.address}</h5>
           </div>
         </div>
         <h5 className="line-clamp-2">{event.description}</h5>

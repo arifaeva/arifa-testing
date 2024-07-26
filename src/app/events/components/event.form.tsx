@@ -7,7 +7,20 @@ import { Input } from "@/components/stories/input";
 
 import { submitEventAction } from "./event.action";
 
-export const EventForm = () => {
+interface IWorkplace {
+  _id: string;
+  name: string;
+  description: string;
+  address: string;
+  city: string;
+  foodPrice: string;
+  file: string;
+  authorId: string;
+  isVerified: boolean;
+  isPublished: boolean;
+}
+
+export const EventForm = ({ workplaces }: { workplaces: IWorkplace[] }) => {
   const [state, formAction, pending] = useActionState(submitEventAction, null);
 
   return (
@@ -33,20 +46,22 @@ export const EventForm = () => {
           type="datetime-local"
           required
         />
-        <Input
-          name="eventWorkplace"
-          placeholder="Workplace name"
-          type="text"
+        <select
           required
-        />
-        <Input
-          className="line-clamp-1"
-          name="eventAddress"
-          placeholder="Workplace address"
-          type="text"
-          required
-        />
-        <input name="workplaceId" value="workplaceId" type="hidden" />
+          name="workplaceId"
+          className="w-full rounded-md border-2 border-[#2e2d33] bg-[#fef4ce] [box-shadow:5px_5px_#2e2d33] px-3 py-2 text-sm ring-offset-background outline-[#2e2d33] file:border-0 placeholder:text-muted-foreground focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+        >
+          {/* <option value="" disabled selected hidden>
+            Choose Workplace...
+          </option> */}
+          {workplaces.map((workplace) => {
+            return (
+              <option key={workplace._id} value={workplace._id}>
+                {workplace.name}
+              </option>
+            );
+          })}
+        </select>
         <Button
           disabled={pending}
           variant="tertiary"

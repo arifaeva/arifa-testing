@@ -1,5 +1,5 @@
 import { API_URL } from "@/config/apiUrl";
-import { IEvent } from "@/types/entity";
+import { IEvent, IWorkplace } from "@/types/entity";
 
 import { EventCard } from "./components/event.card";
 // import { Textarea } from "@/components/stories/text-area";
@@ -40,7 +40,9 @@ export default async function EventPage() {
 
   const res = await fetch(`${API_URL}/events`);
   const { data: events } = (await res.json()) as { data: IEvent[] };
-  console.log(events);
+
+  const res_workplaces = await fetch(`${API_URL}/workplaces`);
+  const workplaces = (await res_workplaces.json()) as IWorkplace[];
 
   return (
     <div className="bg-[#9ccb9a]">
@@ -48,7 +50,7 @@ export default async function EventPage() {
         {/* Section Make Event */}
         <div className="w-[20%] bg-[#fef4ce] p-3 space-y-5 rounded-md border-4 border-[#2e2d33] flex flex-col justify-between h-fit">
           <h1 className="text-center text-[#2e2d33]">Make Event</h1>
-          <EventForm />
+          <EventForm workplaces={workplaces} />
         </div>
 
         {/* Section Event Catalog */}

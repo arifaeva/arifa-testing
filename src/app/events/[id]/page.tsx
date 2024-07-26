@@ -9,7 +9,7 @@ export default async function EventSinglePage({
 }: {
   params: { id: string };
 }) {
-  const res = await fetch(`${API_URL}/events/${params}`);
+  const res = await fetch(`${API_URL}/events/${params.id}`);
   const event = (await res.json()) as IEvent;
 
   return (
@@ -35,8 +35,8 @@ export default async function EventSinglePage({
               <div className="flex flex-col w-80">
                 <h4>: {event.userId.name}</h4>
                 <h4>: {moment(event.dateTime).format("LLL")}</h4>
-                <h4>: {event.eventWorkplace}</h4>
-                <h4>: {event.eventAddress}</h4>
+                <h4>: {event.workplaceId.name}</h4>
+                <h4>: {event.workplaceId.address}</h4>
               </div>
             </div>
           </div>

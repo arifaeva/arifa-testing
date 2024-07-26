@@ -9,15 +9,17 @@ export interface IEvent {
   _id: string;
   title: string;
   dateTime: string;
-  eventWorkplace: string;
-  eventAddress: string;
   description: string;
   userId: {
     _id: string;
     name: string;
     avatarUrl: string;
   };
-  workplaceId: string;
+  workplaceId: {
+    _id: string;
+    name: string;
+    address: string;
+  };
 }
 
 export interface IWorkplace {

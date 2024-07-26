@@ -45,13 +45,22 @@ export default function DashboardPage() {
                   type="text"
                   required
                 />
-                <Input
+                {/* <Input
                   className="w-[320px] self-center"
                   name="foodPrice"
                   placeholder="Food price range"
                   type="text"
                   required
-                />
+                /> */}
+                <select
+                  required
+                  name="foodPrice"
+                  className="w-[320px] self-center rounded-md border-2 border-[#2e2d33] bg-[#fef4ce] [box-shadow:5px_5px_#2e2d33] px-3 py-2 text-sm ring-offset-background outline-[#2e2d33] file:border-0 placeholder:text-muted-foreground focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                >
+                  <option value="10k - 30k">10k - 30k</option>
+                  <option value="30k - 50k">30k - 50k</option>
+                  <option value="50k - 100k">50k - 100k</option>
+                </select>
                 <Input
                   className="w-[320px] self-center"
                   name="address"
