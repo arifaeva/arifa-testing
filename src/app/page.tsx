@@ -1,6 +1,5 @@
+import SearchInput from "@/components/shared/input.search";
 import { LandingPage } from "@/components/shared/landingPage";
-import { WorkplaceCard } from "@/components/shared/workplaceCard";
-import { Input } from "@/components/stories/input";
 import { API_URL } from "@/config/apiUrl";
 import { serverAuth } from "@/libs/serverAuth";
 import { IWorkplace } from "@/types/entity";
@@ -19,21 +18,8 @@ export default async function HomePage() {
           <h1 className="text-center">Catalog</h1>
           <p className="text-center">Find the best place to work!</p>
         </section>
-        <form>
-          <Input
-            name="search workplace"
-            placeholder="Search workplace..."
-            type="text"
-            required
-            className="self-center w-[400px]"
-          />
-        </form>
-        <div className="grid grid-cols-4 gap-4 p-3">
-          {/* ini caranya gimana ya biar cuma nge mapping workplace yang isPublished === true dan isVerified === true? Pake filter? */}
-          {workplaces.map((workplace) => {
-            return <WorkplaceCard key={workplace._id} workplace={workplace} />;
-          })}
-        </div>
+        {/* Pass workplaces data to client component */}
+        <SearchInput workplaces={workplaces} />
       </div>
     </div>
   );
