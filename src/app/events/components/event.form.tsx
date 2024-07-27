@@ -35,6 +35,7 @@ export const EventForm = ({ workplaces }: { workplaces: IWorkplace[] }) => {
         <Input name="title" placeholder="Event Title" type="text" required />
         {/* <Textarea name="description" placeholder="Description" required /> */}
         <Input
+          size="md"
           name="description"
           placeholder="Event Description"
           type="text"

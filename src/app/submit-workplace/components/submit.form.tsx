@@ -37,6 +37,7 @@ export default function SubmitForm() {
                 required
               />
               <Input
+                size="md"
                 className="w-[320px] self-center"
                 name="description"
                 placeholder="Description"
