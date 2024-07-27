@@ -3,6 +3,7 @@
 import Avatar from "boring-avatars";
 import Image from "next/image";
 
+// import { Header } from "@/components/shared/header";
 import { API_URL } from "@/config/apiUrl";
 import { IReview, IWorkplace } from "@/types/entity";
 
@@ -22,6 +23,7 @@ export default async function SinglePage({
 
   return (
     <div className="bg-[#9ccb9a]">
+      {/* <Header /> */}
       <div className="flex flex-col space-y-5 p-6">
         <div className="bg-[#fef4ce] p-5 rounded-lg space-y-4 border-4 border-[#2e2d33] mx-60">
           <Image
