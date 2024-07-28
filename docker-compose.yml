@@ -3,8 +3,6 @@ version: "3.8"
 services:
   product-service:
     build: .
-    container_name: tempatnugas-fe
+    container_name: tempatnugas-fe-final
     ports:
       - "7002:7002"
-    volumes:
-      - .:/app
