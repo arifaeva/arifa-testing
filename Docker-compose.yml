@@ -6,3 +6,5 @@ services:
     container_name: tempatnugas-fe
     ports:
       - "7002:7002"
+    volumes:
+      - .:/app
