@@ -1,10 +1,11 @@
 "use client";
 
 import { useMemo, useState } from "react";
+
 import { WorkplaceCard } from "@/components/shared/workplaceCard";
+import { Button } from "@/components/stories/button";
 import { Input } from "@/components/stories/input";
 import { IWorkplace } from "@/types/entity";
-import { Button } from "@/components/stories/button";
 
 interface SearchInputValue {
   workplaces: IWorkplace[];

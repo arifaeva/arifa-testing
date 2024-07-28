@@ -31,7 +31,7 @@ export const EventCard = ({ event }: { event: IEvent }) => {
 
       <div className="p-2 rounded-lg space-y-2 flex flex-col justify-between h-full">
         <div className="flex justify-start">
-          <div className="font-semibold">
+          <div className="font-semibold w-44">
             <h5>Date & Time</h5>
             <h5>Workplace</h5>
             <h5>Address</h5>
