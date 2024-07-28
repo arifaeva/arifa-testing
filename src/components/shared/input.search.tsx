@@ -14,8 +14,10 @@ export default function SearchInput({ workplaces }: SearchInputValue) {
   const [searchQuery, setSearchQuery] = useState("");
 
   const filteredWorkplaces = useMemo(() => {
-    return workplaces.filter((workplace) =>
-      workplace.name.toLowerCase().includes(searchQuery.toLowerCase())
+    return workplaces.filter(
+      (workplace) =>
+        workplace.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        workplace.city.toLowerCase().includes(searchQuery.toLowerCase()) // Add this line to include city in the search
     );
   }, [searchQuery, workplaces]);
 
