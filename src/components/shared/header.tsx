@@ -21,6 +21,8 @@ export const Header = () => {
   return (
     <div className="text-[#2e2d33]">
       <header className="flex justify-between items-center p-2 border-b-4 border-[#2e2d33] bg-[#fef4ce] ">
+        <link rel="shortcut icon" href="/public/assets/favicon.png" />
+
         <Link href="/">
           <h2 className="p-1.5 font-bold text-2xl">TempatNugas</h2>
         </Link>
